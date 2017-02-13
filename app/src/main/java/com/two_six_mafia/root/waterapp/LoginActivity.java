@@ -33,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
+import static com.two_six_mafia.root.waterapp.R.id.username;
 
 /**
  * A login screen that offers login via email/password.
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.username);
+        mEmailView = (AutoCompleteTextView) findViewById(username);
         populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -197,7 +198,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length() >= 4;
     }
 
     /**
@@ -296,17 +297,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
-        private final String mEmail;
+        private final String mUsername;
         private final String mPassword;
 
-        UserLoginTask(String email, String password) {
-            mEmail = email;
+        UserLoginTask(String username, String password) {
+            mUsername = username;
             mPassword = password;
         }
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
+            /*// TODO: attempt authentication against a network service.
 
             try {
                 // Simulate network access.
@@ -323,8 +324,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }
             }
 
-            // TODO: register the new account here.
-            return true;
+            // TODO: register the new account here.*/
+
+            if (mUsername.equals("user") && mPassword.equals("pass")) {
+                return true;
+            }
+            return false;
         }
 
         @Override
@@ -333,6 +338,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
