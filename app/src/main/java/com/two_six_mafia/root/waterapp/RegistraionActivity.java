@@ -27,7 +27,7 @@ public class RegistraionActivity extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button mRegisterButton = (Button) findViewById(R.id.register_button);
+        Button mRegisterButton = (Button) findViewById(R.id.cancel_button);
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
