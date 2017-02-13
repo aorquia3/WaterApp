@@ -31,6 +31,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.two_six_mafia.root.waterapp.LoginActivity" />
         </activity>
+        <activity
+            android:name=".HomescreenActivity"
+            android:label="@string/title_activity_homescreen"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.two_six_mafia.root.waterapp.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>
