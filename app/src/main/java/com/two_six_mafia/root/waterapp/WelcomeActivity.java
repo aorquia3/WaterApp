@@ -35,12 +35,18 @@ public class WelcomeActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Sets the login button to go to the log in page.
+     */
     private void goLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
 
+    /**
+     * Sets the register button to go to the register page.
+     */
     private void goRegister() {
         Intent intent = new Intent(this, RegistrationActivity.class);
         startActivity(intent);

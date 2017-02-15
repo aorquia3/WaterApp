@@ -142,6 +142,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
+    /**
+     * Validates the password is longer than 4 characters
+     * @param password to get into the app
+     * @return string of the password
+     */
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         return password.length() >= 4;
