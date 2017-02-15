@@ -29,6 +29,9 @@ public class HomescreenActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Sets logout button to go to welcome page
+     */
     private void logout() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);

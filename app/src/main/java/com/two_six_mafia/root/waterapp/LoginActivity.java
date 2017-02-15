@@ -349,6 +349,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
+    /**
+     * Cancel button flows to Welcome Page
+     */
     private void cancel() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
