@@ -27,7 +27,7 @@ public class WelcomeActivity extends AppCompatActivity {
         });
 
         Button register = (Button) findViewById(R.id.welcome_register);
-        login.setOnClickListener(new OnClickListener() {
+        register.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 goRegister();
@@ -35,15 +35,16 @@ public class WelcomeActivity extends AppCompatActivity {
         });
     }
 
-    protected void goLogin() {
+    private void goLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
 
-    protected void goRegister() {
-        Intent intent = new Intent(this, RegistraionActivity.class);
+    private void goRegister() {
+        Intent intent = new Intent(this, RegistrationActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }

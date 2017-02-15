@@ -38,5 +38,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/welcome_register"
         android:layout_alignStart="@+id/welcome_register"
-        android:layout_marginBottom="52dp"/>
+        android:layout_marginBottom="52dp" />
 </RelativeLayout>
