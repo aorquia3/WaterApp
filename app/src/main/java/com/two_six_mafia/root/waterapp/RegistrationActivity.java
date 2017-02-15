@@ -20,13 +20,5 @@ public class RegistrationActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button mRegisterButton = (Button) findViewById(R.id.cancel_button);
-        mRegisterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Whatever the register button does, which is nothing right now.
-            }
-        });
     }
-
 }

@@ -30,13 +30,11 @@
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registraion"
-            android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".HomescreenActivity"
             android:label="@string/title_activity_homescreen"
-            android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <!--
