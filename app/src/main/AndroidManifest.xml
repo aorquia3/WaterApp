@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name">
+            android:name=".WelcomeActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,24 +24,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegistraionActivity"
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".WelcomeActivity">
+        </activity>
+        <activity
+            android:name=".RegistrationActivity"
             android:label="@string/title_activity_registraion"
-            android:parentActivityName=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.two_six_mafia.root.waterapp.LoginActivity" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".WelcomeActivity">
         </activity>
         <activity
             android:name=".HomescreenActivity"
             android:label="@string/title_activity_homescreen"
-            android:parentActivityName=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.two_six_mafia.root.waterapp.LoginActivity" />
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".LoginActivity">
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
