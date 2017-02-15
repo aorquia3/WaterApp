@@ -32,7 +32,7 @@ public class RegistrationActivity extends AppCompatActivity {
     /**
      * Sets the cancel button to go to the Welcome Page
      */
-    private void cancel() {
+    protected void cancel() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
         finish();
