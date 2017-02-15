@@ -15,4 +15,5 @@
     </string>
     <string name="title_activity_registraion">RegistraionActivity</string>
     <string name="title_activity_homescreen">HomescreenActivity</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
 </resources>
