@@ -20,16 +20,16 @@ public class HomescreenActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Button cancel = (Button) findViewById(R.id.cancel_button);
-        cancel.setOnClickListener(new View.OnClickListener() {
+        Button logout = (Button) findViewById(R.id.cancel_button);
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cancel();
+                logout();
             }
         });
     }
 
-    private void cancel() {
+    private void logout() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
         finish();
