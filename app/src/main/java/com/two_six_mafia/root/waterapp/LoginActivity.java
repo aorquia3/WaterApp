@@ -87,6 +87,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        Button cancel = (Button) findViewById(R.id.cancel_button);
+        cancel.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancel();
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -334,6 +342,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
         }
+    }
+
+    private void cancel() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
 

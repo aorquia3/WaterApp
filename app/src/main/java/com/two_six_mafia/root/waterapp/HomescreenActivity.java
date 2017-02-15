@@ -1,11 +1,13 @@
 package com.two_six_mafia.root.waterapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 public class HomescreenActivity extends AppCompatActivity {
 
@@ -17,6 +19,21 @@ public class HomescreenActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button cancel = (Button) findViewById(R.id.cancel_button);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancel();
+            }
+        });
     }
+
+    private void cancel() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
 }
