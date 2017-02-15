@@ -74,7 +74,7 @@
         android:layout_alignTop="@+id/button"
         android:layout_alignRight="@+id/editText4"
         android:layout_alignEnd="@+id/editText4"
-        android:id="@+id/button2" />
+        android:id="@+id/Cancel_Registration" />
 
     <TextView
         android:text="Please enter and confirm your password"

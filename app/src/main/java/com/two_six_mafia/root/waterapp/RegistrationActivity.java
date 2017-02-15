@@ -20,5 +20,21 @@ public class RegistrationActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Button cancel = (Button) findViewById(R.id.Cancel_Registration);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancel();
+            }
+        });
+    }
+
+    /**
+     * Sets the cancel button to go to the Welcome Page
+     */
+    private void cancel() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
