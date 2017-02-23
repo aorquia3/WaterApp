@@ -25,7 +25,6 @@ public class Person {
      * @param username to enter the application
      * @param password that belongs with the username
      */
-    public Person(String username, String password) {
         this.username = username;
         this.password = password;
         this.name = name;
@@ -60,5 +59,7 @@ public class Person {
         this.password = password;
     }
 
-    public String toString()
+    public String toString() {
+        return "String";
+    }
 }
