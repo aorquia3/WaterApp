@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.two_six_mafia.root.waterapp.EditProfileActivity"
+    tools:showIn="@layout/activity_edit_profile">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Update Email Address"
+        android:ems="10"
+        android:id="@+id/updateEmail"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Enter New Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFieldPassword"
+        android:textSize="24sp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/updatePassword"
+        android:layout_marginEnd="18dp"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="14dp"
+        android:id="@+id/updatePassword"
+        android:singleLine="false"
+        android:selectAllOnFocus="false"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textFieldPassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/updateName"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="61dp"
+        android:id="@+id/profileCancel" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profileCancel"
+        android:layout_alignEnd="@+id/verifyUpdatePassword"
+        android:id="@+id/profileSave" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Update Name"
+        android:ems="10"
+        android:id="@+id/updateName"
+        android:textSize="24sp"
+        android:layout_below="@+id/updateEmail"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/verifyUpdatePassword"
+        android:singleLine="false"
+        android:selectAllOnFocus="false"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/updatePassword"
+        android:layout_alignStart="@+id/updatePassword" />
+
+</RelativeLayout>
