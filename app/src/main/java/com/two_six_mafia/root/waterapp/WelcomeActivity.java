@@ -41,7 +41,6 @@ public class WelcomeActivity extends AppCompatActivity {
     private void goLogin() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-        finish();
     }
 
     /**
@@ -50,7 +49,6 @@ public class WelcomeActivity extends AppCompatActivity {
     private void goRegister() {
         Intent intent = new Intent(this, RegistrationActivity.class);
         startActivity(intent);
-        finish();
     }
 
 }

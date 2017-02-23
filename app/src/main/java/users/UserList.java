@@ -7,11 +7,15 @@ import java.util.HashMap;
  */
 
 public class UserList {
-    private HashMap<String, Person> users;
+    private static UserList userList = new UserList();
+    private HashMap<String, Person> users = new HashMap<>();
 
-    public UserList(Person person) {
-        users = new HashMap<String, Person>();
-        users.put(person.getUsername(), person);
+    public static UserList getInstance() {
+        return userList;
+    }
+
+    public void addUser(Person user) {
+        users.put(user.getName(), user);
     }
 
     public boolean isRegisteredUser(String username) {
