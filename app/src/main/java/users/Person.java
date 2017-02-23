@@ -11,6 +11,10 @@ public class Person {
     //For now, passowords are still stored in plain text.
     private String password;
 
+    public Person() {
+        this.username = null;
+        this.password = null;
+    }
     public Person(String username, String password) {
         this.username = username;
         this.password = password;
