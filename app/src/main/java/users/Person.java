@@ -80,6 +80,12 @@ public class Person {
         this.password = password;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+
     /**
      * Sets the UserType
      * @param userType that determines user privileges
