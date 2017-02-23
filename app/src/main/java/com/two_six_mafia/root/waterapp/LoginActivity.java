@@ -326,7 +326,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             UserList users = UserList.getInstance();
             if (users.isRegisteredUser(mUsername)) {
-                System.out.println("good username");
                 return users.getUser(mUsername).checkPassword(mPassword);
             }
 

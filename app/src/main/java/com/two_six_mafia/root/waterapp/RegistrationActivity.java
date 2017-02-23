@@ -114,6 +114,8 @@ public class RegistrationActivity extends AppCompatActivity {
         user.setUserType(type);
 
         users.addUser(user);
+        Model model = Model.getInstance();
+        model.setCurrentUser(user);
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
