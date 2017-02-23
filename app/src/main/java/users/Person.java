@@ -19,16 +19,17 @@ public class Person {
         this.password = null;
     }
 
-    public Person(String username, String password, String name) {
     /**
      * Constructor
      * @param username to enter the application
      * @param password that belongs with the username
+     * @param
      */
-    public Person(String username, String password) {
+    public Person(String username, String password, String name, UserType userType) {
         this.username = username;
         this.password = password;
         this.name = name;
+        this.userType = userType;
     }
 
     /**
@@ -60,5 +61,7 @@ public class Person {
         this.password = password;
     }
 
-    public String toString()
+    public String toString() {
+        return null;
+    }
 }
