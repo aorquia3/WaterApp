@@ -46,7 +46,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".EditProfile"
+            android:name=".EditProfileActivity"
             android:label="@string/title_activity_edit_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

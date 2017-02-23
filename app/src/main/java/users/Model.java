@@ -9,6 +9,7 @@ public class Model {
         return ourInstance;
     }
 
+    //We want to track the user who is currently logged in.
     private Person currentUser;
 
     private Model() {

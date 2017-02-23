@@ -7,7 +7,7 @@ package users;
 public class Manager extends Worker {
     /**
      *
-     * @return true if the Historical Report was submitted
+     * @return true if historical report exists
      */
     public boolean viewHistoricalReport() {
         return true;

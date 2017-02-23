@@ -85,6 +85,8 @@ public class RegistrationActivity extends AppCompatActivity {
         finish();
     }
 
+    //Based on the input data, create a new person with the proper user type and set instance
+    //fields.
     protected void register() {
         Person user;
         UserList users = UserList.getInstance();
@@ -113,9 +115,8 @@ public class RegistrationActivity extends AppCompatActivity {
         user.setPassword(passwordField.getText().toString());
         user.setUserType(type);
 
+        //Add the user to registered users
         users.addUser(user);
-        Model model = Model.getInstance();
-        model.setCurrentUser(user);
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);

@@ -37,6 +37,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.ArrayList;
 import java.util.List;
 
+import users.Model;
 import users.Person;
 import users.UserList;
 
@@ -338,6 +339,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                UserList users = UserList.getInstance();
+                Model model = Model.getInstance();
+                Person user = users.getUser(mUsername);
+                model.setCurrentUser(user);
                 Intent intent = new Intent(LoginActivity.this, HomescreenActivity.class);
                 startActivity(intent);
                 finish();
