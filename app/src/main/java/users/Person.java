@@ -5,7 +5,7 @@ package users;
  */
 
 public class Person {
-    private final String username;
+    private String username;
     //For now, passwords are still stored in plain text.
     private String password;
     private String name;
@@ -41,8 +41,44 @@ public class Person {
         return username;
     }
 
+    /**
+     * gets the name
+     * @return name of the user
+     */
     public String getName() {
         return name;
+    }
+
+    /**
+     * Sets the name
+     * @param name of user
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Sets USername
+     * @param username of the user
+     */
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    /**
+     * Sets Password
+     * @param password of the user
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    /**
+     * Sets the UserType
+     * @param userType that determines user privileges
+     */
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 
     /**

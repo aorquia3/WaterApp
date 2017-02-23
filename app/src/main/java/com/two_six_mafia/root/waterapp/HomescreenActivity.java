@@ -27,6 +27,14 @@ public class HomescreenActivity extends AppCompatActivity {
                 logout();
             }
         });
+
+        Button editUser = (Button) findViewById(R.id.editUser);
+        editUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editProfile();
+            }
+        });
     }
 
     /**
@@ -38,5 +46,12 @@ public class HomescreenActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * Takes the user to the Edit Profile Page
+     */
+    private void editProfile() {
+        Intent intent = new Intent(this, EditProfile.class);
+        startActivity(intent);
+    }
 
 }
