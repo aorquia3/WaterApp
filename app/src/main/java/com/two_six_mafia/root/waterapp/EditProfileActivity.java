@@ -1,62 +1,57 @@
 package com.two_six_mafia.root.waterapp;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import users.Person;
-import users.UserType;
+import users.Model;
+import users.UserList;
 import users.*;
 
-public class RegistrationActivity extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-    private Spinner userType;
-    private EditText nameField;
     private EditText emailField;
-    private EditText usernameField;
+    private EditText nameField;
     private EditText passwordField;
     private EditText confirmPasswordField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registraion);
+        setContentView(R.layout.activity_edit_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        userType = (Spinner) findViewById(R.id.userType);
-        nameField = (EditText) findViewById(R.id.name);
-        emailField = (EditText) findViewById(R.id.email);
-        usernameField = (EditText) findViewById(R.id.username);
-        passwordField = (EditText) findViewById(R.id.password);
-        confirmPasswordField = (EditText) findViewById(R.id.confirmpassword);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        userType.setAdapter(adapter);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        Button cancel = (Button) findViewById(R.id.Cancel_Registration);
+        Button cancel = (Button) findViewById(R.id.profileCancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,18 +59,29 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        Button register = (Button) findViewById(R.id.add);
-        register.setOnClickListener(new View.OnClickListener() {
+        passwordField = (EditText) findViewById(R.id.updatePassword);
+        emailField = (EditText) findViewById(R.id.updateEmail);
+        nameField = (EditText) findViewById(R.id.updateName);
+
+        Button save = (Button) findViewById(R.id.profileSave);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                register();
+                save();
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
+    protected void save() {
+        Model model = Model.getInstance();
+        Person currentUser = model.getCurrentUser();
+        currentUser.setEmail(emailField.getText().toString());
+        currentUser.setName(nameField.getText().toString());
+        currentUser.setPassword(passwordField.getText().toString());
+
+        Intent intent = new Intent(this, HomescreenActivity.class);
+        startActivity(intent);
+    }
     /**
      * Sets the cancel button to go to the Welcome Page
      */
@@ -85,50 +91,13 @@ public class RegistrationActivity extends AppCompatActivity {
         finish();
     }
 
-    //Based on the input data, create a new person with the proper user type and set instance
-    //fields.
-    protected void register() {
-        Person user;
-        UserList users = UserList.getInstance();
-
-        UserType type = (UserType) userType.getSelectedItem();
-        switch (type) {
-            case USER:
-                user = new User();
-                break;
-            case WORKER:
-                user = new Worker();
-                break;
-            case MANAGER:
-                user = new Manager();
-                break;
-            case ADMIN:
-                user = new Admin();
-                break;
-            default:
-                user = new User();
-                break;
-        }
-        user.setName(nameField.getText().toString());
-        user.setUsername(usernameField.getText().toString());
-        user.setEmail(emailField.getText().toString());
-        user.setPassword(passwordField.getText().toString());
-        user.setUserType(type);
-
-        //Add the user to registered users
-        users.addUser(user);
-
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
-                .setName("Registration Page") // TODO: Define a title for the content shown.
+                .setName("EditProfileActivity Page") // TODO: Define a title for the content shown.
                 // TODO: Make sure this auto-generated URL is correct.
                 .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
                 .build();

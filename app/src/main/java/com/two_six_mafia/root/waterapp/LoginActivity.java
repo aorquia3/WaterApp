@@ -37,6 +37,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.ArrayList;
 import java.util.List;
 
+import users.Model;
+import users.Person;
+import users.UserList;
+
 import static com.two_six_mafia.root.waterapp.R.id.username;
 
 /**
@@ -321,9 +325,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             // TODO: register the new account here.*/
 
-            if (mUsername.equals("user") && mPassword.equals("pass")) {
-                return true;
+            UserList users = UserList.getInstance();
+            if (users.isRegisteredUser(mUsername)) {
+                return users.getUser(mUsername).checkPassword(mPassword);
             }
+
             return false;
         }
 
@@ -333,6 +339,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                UserList users = UserList.getInstance();
+                Model model = Model.getInstance();
+                Person user = users.getUser(mUsername);
+                model.setCurrentUser(user);
                 Intent intent = new Intent(LoginActivity.this, HomescreenActivity.class);
                 startActivity(intent);
                 finish();
