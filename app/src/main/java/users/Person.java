@@ -9,6 +9,7 @@ public class Person {
     //For now, passwords are still stored in plain text.
     private String password;
     private String name;
+    private String email;
     private UserType userType;
 
     /**
@@ -23,13 +24,15 @@ public class Person {
      * Constructor
      * @param username to enter the application
      * @param password that belongs with the username
-     * @param name of the Person
-     * @param userType being admin, user, manager, or worker
+     * @param name display name
+     * @param email email address
+     * @param userType type of user (ENUM)
      */
-    public Person(String username, String password, String name, UserType userType) {
+    public Person(String username, String password, String name, String email, UserType userType) {
         this.username = username;
         this.password = password;
         this.name = name;
+        this.email = email;
         this.userType = userType;
     }
 
@@ -47,6 +50,10 @@ public class Person {
      */
     public String getName() {
         return name;
+    }
+
+    public UserType getUserType() {
+        return userType;
     }
 
     /**
