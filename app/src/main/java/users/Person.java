@@ -23,7 +23,8 @@ public class Person {
      * Constructor
      * @param username to enter the application
      * @param password that belongs with the username
-     * @param
+     * @param name of the Person
+     * @param userType being admin, user, manager, or worker
      */
     public Person(String username, String password, String name, UserType userType) {
         this.username = username;
@@ -61,6 +62,10 @@ public class Person {
         this.password = password;
     }
 
+    /**
+     * toString Methode
+     * @return a string
+     */
     public String toString() {
         return null;
     }
