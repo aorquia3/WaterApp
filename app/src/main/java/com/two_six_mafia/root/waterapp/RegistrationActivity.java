@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.google.android.gms.appindexing.Action;
@@ -17,7 +18,9 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import users.Person;
 import users.UserType;
+import users.*;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -27,6 +30,11 @@ public class RegistrationActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
     private Spinner userType;
+    private EditText nameField;
+    private EditText emailField;
+    private EditText usernameField;
+    private EditText passwordField;
+    private EditText confirmPasswordField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,11 @@ public class RegistrationActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         userType = (Spinner) findViewById(R.id.userType);
+        nameField = (EditText) findViewById(R.id.name);
+        emailField = (EditText) findViewById(R.id.email);
+        usernameField = (EditText) findViewById(R.id.username);
+        passwordField = (EditText) findViewById(R.id.password);
+        confirmPasswordField = (EditText) findViewById(R.id.confirmpassword);
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -50,6 +63,14 @@ public class RegistrationActivity extends AppCompatActivity {
                 cancel();
             }
         });
+
+        Button register = (Button) findViewById(R.id.add);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                register();
+            }
+        });
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -62,6 +83,40 @@ public class RegistrationActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    protected void register() {
+        Person user;
+        UserList users = UserList.getInstance();
+
+        UserType type = (UserType) userType.getSelectedItem();
+        switch (type) {
+            case USER:
+                user = new User();
+                break;
+            case WORKER:
+                user = new Worker();
+                break;
+            case MANAGER:
+                user = new Manager();
+                break;
+            case ADMIN:
+                user = new Admin();
+                break;
+            default:
+                user = new User();
+                break;
+        }
+        user.setName(nameField.getText().toString());
+        user.setUsername(usernameField.getText().toString());
+        user.setEmail(emailField.getText().toString());
+        user.setPassword(passwordField.getText().toString());
+        user.setUserType(type);
+
+        users.addUser(user);
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     /**
