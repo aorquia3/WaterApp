@@ -1,4 +1,4 @@
-package users;
+package com.two_six_mafia.root.waterapp.Model;
 
 import java.util.HashMap;
 

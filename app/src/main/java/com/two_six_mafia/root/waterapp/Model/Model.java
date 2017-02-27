@@ -1,4 +1,4 @@
-package users;
+package com.two_six_mafia.root.waterapp.Model;
 
 /**
  * Created by aaron on 2/23/17.

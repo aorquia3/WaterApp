@@ -1,10 +1,8 @@
-package com.two_six_mafia.root.waterapp;
+package com.two_six_mafia.root.waterapp.Controller;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.pm.PackageManager;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Intent;
@@ -37,9 +35,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import java.util.ArrayList;
 import java.util.List;
 
-import users.Model;
-import users.Person;
-import users.UserList;
+import com.two_six_mafia.root.waterapp.Model.Model;
+import com.two_six_mafia.root.waterapp.Model.Person;
+import com.two_six_mafia.root.waterapp.Model.UserList;
+import com.two_six_mafia.root.waterapp.R;
 
 import static com.two_six_mafia.root.waterapp.R.id.username;
 
