@@ -1,4 +1,4 @@
-package com.two_six_mafia.root.waterapp;
+package com.two_six_mafia.root.waterapp.Controller;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,9 +16,9 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import users.Model;
-import users.UserList;
-import users.*;
+import com.two_six_mafia.root.waterapp.Model.Model;
+import com.two_six_mafia.root.waterapp.Model.*;
+import com.two_six_mafia.root.waterapp.R;
 
 public class EditProfileActivity extends AppCompatActivity {
 
