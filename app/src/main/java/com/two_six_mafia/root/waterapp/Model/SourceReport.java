@@ -25,6 +25,7 @@ public class SourceReport {
         this.reporter = reporter;
         this.waterType = waterType;
         this.waterCondition = waterCondition;
+        this.reportNumber = reportNumber++;
     }
 
     /**
@@ -36,6 +37,6 @@ public class SourceReport {
     }
 
     public String toString() {
-        return "Report submitted on: " + date + " " + time + " By: " + reporter;
+        return "Report number: " + reportNumber + " submitted on: " + date + " " + time + " By: " + reporter;
     }
 }
