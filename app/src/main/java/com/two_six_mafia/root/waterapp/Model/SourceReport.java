@@ -25,7 +25,7 @@ public class SourceReport {
         this.reporter = reporter;
         this.waterType = waterType;
         this.waterCondition = waterCondition;
-        this.reportNumber = reportNumber++;
+        this.reportNumber = REPORT_COUNTER++;
     }
 
     /**
