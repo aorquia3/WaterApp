@@ -19,6 +19,10 @@ public class SourceReport {
     private WaterCondition waterCondition;
 
 
+    /**
+     * Will get the location
+     * @return location of parent
+     */
     public int getLocation() {
         return parent.getLocation();
     }
