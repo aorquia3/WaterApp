@@ -43,6 +43,14 @@ public class HomescreenActivity extends AppCompatActivity {
                 sourceReport();
             }
         });
+
+        Button viewReports = (Button) findViewById(R.id.viewReports);
+        viewReports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewReports();
+            }
+        });
     }
 
     /**
@@ -67,6 +75,11 @@ public class HomescreenActivity extends AppCompatActivity {
      */
     private void sourceReport() {
         Intent intent = new Intent(this, SourceReportActivity.class);
+        startActivity(intent);
+    }
+
+    private void viewReports() {
+        Intent intent = new Intent(this, ReportListActivity.class);
         startActivity(intent);
     }
 

@@ -47,4 +47,13 @@
         android:layout_marginTop="35dp"
         android:layout_below="@+id/editUser"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="View Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/source_report"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:id="@+id/viewReports" />
 </RelativeLayout>
