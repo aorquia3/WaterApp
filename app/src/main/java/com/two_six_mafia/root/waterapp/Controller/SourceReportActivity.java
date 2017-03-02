@@ -48,6 +48,7 @@ public class SourceReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report);
 
+        //Lots of buttons and spinners
         waterType = (Spinner) findViewById(R.id.waterType);
         waterCondition = (Spinner) findViewById(R.id.waterCondition);
         userName = (EditText) findViewById(R.id.userName);
@@ -63,7 +64,6 @@ public class SourceReportActivity extends AppCompatActivity {
                 add();
             }
         });
-
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +71,7 @@ public class SourceReportActivity extends AppCompatActivity {
             }
         });
 
+        //Populate date and time fields.
         EditText autoDate = (EditText) findViewById(R.id.autoDate);
         EditText autoTime = (EditText) findViewById(R.id.autoTime);
 
@@ -83,7 +84,8 @@ public class SourceReportActivity extends AppCompatActivity {
         autoDate.setText(date);
         autoTime.setText(time);
 
-        ArrayAdapter<String> adapter1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterType.values());
+        //Set spinners for the watertype and watercondition spinners.
+        ArrayAdapter<WaterType> adapter1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterType.values());
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         waterType.setAdapter(adapter1);
 
@@ -93,6 +95,9 @@ public class SourceReportActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Adds to the model
+     */
     private void add() {
         Model model = Model.getInstance();
         //Still need to validate user inputs before creating the object.
@@ -107,6 +112,9 @@ public class SourceReportActivity extends AppCompatActivity {
         cancel();
     }
 
+    /**
+     * This will cancel and return to the homescreen.
+     */
     private void cancel() {
         Intent intent = new Intent(this, HomescreenActivity.class);
         startActivity(intent);

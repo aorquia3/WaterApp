@@ -31,7 +31,7 @@ public class Model {
         reportList = new ArrayList<>();
     }
 
-    /**?
+    /**
      * sets up the current user
      * @param person
      */

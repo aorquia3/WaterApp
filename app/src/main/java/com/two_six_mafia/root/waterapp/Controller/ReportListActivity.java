@@ -27,15 +27,9 @@ public class ReportListActivity extends AppCompatActivity {
 
         Model model = Model.getInstance();
         List<SourceReport> sourceReports = (ArrayList) model.getReportList();
-        List<String> testlist = new ArrayList<>();
 
-        //I feel like this should not be necessary.
-        for(SourceReport report : sourceReports) {
-            testlist.add(report.toString());
-        }
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, testlist);
+        ArrayAdapter<SourceReport> arrayAdapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_list_item_1, sourceReports);
         listview.setAdapter(arrayAdapter);
 
     }
