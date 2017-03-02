@@ -49,7 +49,8 @@
             android:name=".Controller.EditProfileActivity"
             android:label="@string/title_activity_edit_profile"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Controller.SourceReportActivity"></activity>
+        <activity android:name=".Controller.SourceReportActivity" />
+        <activity android:name=".Controller.ReportListActivity"></activity>
     </application>
 
 </manifest>
