@@ -85,6 +85,9 @@ public class RegistrationActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * Protects against entering blank registration
+     */
     protected void register() {
         Person user;
         UserList users = UserList.getInstance();

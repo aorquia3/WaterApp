@@ -52,6 +52,10 @@ public class Person {
         return name;
     }
 
+    /**
+     * Will get the user type
+     * @return userType
+     */
     public UserType getUserType() {
         return userType;
     }
@@ -80,6 +84,10 @@ public class Person {
         this.password = password;
     }
 
+    /**
+     * Will set the email
+     * @param email associated with account
+     */
     public void setEmail(String email) {
         this.email = email;
     }
