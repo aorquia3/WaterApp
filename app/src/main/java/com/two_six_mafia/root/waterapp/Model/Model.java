@@ -1,4 +1,6 @@
 package com.two_six_mafia.root.waterapp.Model;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by aaron on 2/23/17.
@@ -8,6 +10,8 @@ public class Model {
     public static Model getInstance() {
         return ourInstance;
     }
+
+    private LinkedList<WaterSource> sourceList;
 
     //We want to track the user who is currently logged in.
     private Person currentUser;
@@ -23,4 +27,13 @@ public class Model {
     public Person getCurrentUser() {
         return currentUser;
     }
+
+    public void addToSources(WaterSource source) {
+        sourceList.add(source);
+    }
+
+    public List<WaterSource> getSourceList() {
+        return sourceList;
+    }
+
 }
