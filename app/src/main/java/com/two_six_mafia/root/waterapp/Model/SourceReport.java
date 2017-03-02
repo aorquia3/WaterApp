@@ -49,6 +49,6 @@ public class SourceReport {
      * @return a string
      */
     public String toString() {
-        return "Report number: " + reportNumber + " submitted on: " + date + " " + time + " By: " + reporter;
+        return "Report number: " + reportNumber + " Submitted on: " + date + " " + time + " By: " + reporter;
     }
 }
