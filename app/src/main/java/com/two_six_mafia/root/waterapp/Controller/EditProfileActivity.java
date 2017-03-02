@@ -1,5 +1,6 @@
-package com.two_six_mafia.root.waterapp;
+package com.two_six_mafia.root.waterapp.Controller;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,19 +8,29 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class EditProfile extends AppCompatActivity {
+import com.two_six_mafia.root.waterapp.Model.Model;
+import com.two_six_mafia.root.waterapp.Model.*;
+import com.two_six_mafia.root.waterapp.R;
+
+public class EditProfileActivity extends AppCompatActivity {
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    private EditText emailField;
+    private EditText nameField;
+    private EditText passwordField;
+    private EditText confirmPasswordField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +50,45 @@ public class EditProfile extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        Button cancel = (Button) findViewById(R.id.profileCancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancel();
+            }
+        });
+
+        passwordField = (EditText) findViewById(R.id.updatePassword);
+        emailField = (EditText) findViewById(R.id.updateEmail);
+        nameField = (EditText) findViewById(R.id.updateName);
+
+        Button save = (Button) findViewById(R.id.profileSave);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                save();
+            }
+        });
+    }
+
+    protected void save() {
+        Model model = Model.getInstance();
+        Person currentUser = model.getCurrentUser();
+        currentUser.setEmail(emailField.getText().toString());
+        currentUser.setName(nameField.getText().toString());
+        currentUser.setPassword(passwordField.getText().toString());
+
+        Intent intent = new Intent(this, HomescreenActivity.class);
+        startActivity(intent);
+    }
+    /**
+     * Sets the cancel button to go to the Welcome Page
+     */
+    protected void cancel() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     /**
@@ -47,7 +97,7 @@ public class EditProfile extends AppCompatActivity {
      */
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
-                .setName("EditProfile Page") // TODO: Define a title for the content shown.
+                .setName("EditProfileActivity Page") // TODO: Define a title for the content shown.
                 // TODO: Make sure this auto-generated URL is correct.
                 .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
                 .build();

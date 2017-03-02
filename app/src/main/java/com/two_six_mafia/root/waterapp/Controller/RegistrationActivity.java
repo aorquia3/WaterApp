@@ -1,10 +1,8 @@
-package com.two_six_mafia.root.waterapp;
+package com.two_six_mafia.root.waterapp.Controller;
 
 import android.net.Uri;
 import android.os.Bundle;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -18,9 +16,10 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import users.Person;
-import users.UserType;
-import users.*;
+import com.two_six_mafia.root.waterapp.Model.Person;
+import com.two_six_mafia.root.waterapp.Model.UserType;
+import com.two_six_mafia.root.waterapp.Model.*;
+import com.two_six_mafia.root.waterapp.R;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -116,6 +115,7 @@ public class RegistrationActivity extends AppCompatActivity {
         user.setPassword(passwordField.getText().toString());
         user.setUserType(type);
 
+        //Add the user to registered users
         users.addUser(user);
 
         Intent intent = new Intent(this, LoginActivity.class);

@@ -1,4 +1,4 @@
-package users;
+package com.two_six_mafia.root.waterapp.Model;
 
 /**
  * Created by aaron on 2/22/17.
@@ -53,11 +53,19 @@ public class Person {
     }
 
     /**
-     * Will get the user type
+     * Returns the type of user.
      * @return userType
      */
     public UserType getUserType() {
         return userType;
+    }
+
+    /**
+     * Returns a user's email address
+     * @return
+     */
+    public String getEmail() {
+        return email;
     }
 
     /**
@@ -85,8 +93,8 @@ public class Person {
     }
 
     /**
-     * Will set the email
-     * @param email associated with account
+     * Allows users to change their email address
+     * @param email the new email address
      */
     public void setEmail(String email) {
         this.email = email;
@@ -120,10 +128,10 @@ public class Person {
     }
 
     /**
-     * toString Methode
+     * toString Method
      * @return a string
      */
     public String toString() {
-        return null;
+        return name + " with username: " + username;
     }
 }

@@ -1,4 +1,4 @@
-package users;
+package com.two_six_mafia.root.waterapp.Model;
 
 /**
  * Created by rjara on 2/22/2017.
@@ -7,7 +7,7 @@ package users;
 public class Manager extends Worker {
     /**
      *
-     * @return true if the Historical Report was submitted
+     * @return true if historical report exists
      */
     public boolean viewHistoricalReport() {
         return true;

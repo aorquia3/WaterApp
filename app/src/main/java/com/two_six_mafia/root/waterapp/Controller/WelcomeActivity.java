@@ -1,4 +1,4 @@
-package com.two_six_mafia.root.waterapp;
+package com.two_six_mafia.root.waterapp.Controller;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
+
+import com.two_six_mafia.root.waterapp.Controller.LoginActivity;
+import com.two_six_mafia.root.waterapp.Controller.RegistrationActivity;
+import com.two_six_mafia.root.waterapp.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
