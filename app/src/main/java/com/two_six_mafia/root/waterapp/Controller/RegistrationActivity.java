@@ -84,8 +84,9 @@ public class RegistrationActivity extends AppCompatActivity {
         finish();
     }
 
-    //Based on the input data, create a new person with the proper user type and set instance
-    //fields.
+    /**
+     * Protects against entering blank registration
+     */
     protected void register() {
         Person user;
         UserList users = UserList.getInstance();
