@@ -33,7 +33,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
+        android:hint="Reporter"
         android:ems="10"
         android:layout_below="@+id/autoDate"
         android:layout_alignEnd="@+id/autoDate"
@@ -44,27 +44,62 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Source Location"
+        android:inputType="number"
+        android:hint="Location (LATLONG)"
         android:ems="10"
         android:layout_marginTop="19dp"
         android:id="@+id/sourceLocation"
         android:layout_below="@+id/userName"
         android:layout_alignStart="@+id/userName" />
 
-    <Spinner
-        android:layout_width="match_parent"
+    <TextView
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/autoTime"
+        android:layout_marginTop="18dp"
+        android:id="@+id/time" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autoTime"
+        android:layout_alignStart="@+id/autoDate"
+        android:layout_marginTop="28dp"
+        android:id="@+id/date" />
+
+    <TextView
+        android:text="Type"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sourceLocation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:id="@+id/waterType" />
+        android:layout_alignStart="@+id/sourceLocation"
+        android:id="@+id/type" />
+
+    <TextView
+        android:text="Condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Condition"
+        android:layout_below="@+id/waterType"
+        android:layout_alignStart="@+id/type"
+        android:layout_marginTop="18dp" />
 
     <Spinner
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/waterType"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:id="@+id/waterCondition" />
+        android:layout_marginTop="25dp"
+        android:id="@+id/waterCondition"
+        android:layout_below="@+id/Condition"
+        android:layout_alignStart="@+id/waterType" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/waterType"
+        android:layout_below="@+id/type"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
