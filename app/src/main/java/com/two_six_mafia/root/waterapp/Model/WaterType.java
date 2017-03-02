@@ -5,7 +5,7 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 
 /**
- * Holds the Types of Water
+ * Holds the Types of Water 
  */
 public enum WaterType {
     BOTTLED, WELL, STREAM, LAKE, SPRING, OTHER

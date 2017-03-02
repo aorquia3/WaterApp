@@ -19,6 +19,14 @@ public class SourceReport {
     private WaterType waterType;
     private WaterCondition waterCondition;
 
+    /**
+     * Constructs the source report
+     * @param date report is submitted
+     * @param time report is submiteed
+     * @param reporter that submits report
+     * @param waterType of the source
+     * @param waterCondition of the source
+     */
     public SourceReport(String date, String time, String reporter, WaterType waterType, WaterCondition waterCondition) {
         this.date = date;
         this.time = time;
@@ -36,6 +44,10 @@ public class SourceReport {
         return parent.getLocation();
     }
 
+    /**
+     * To string method
+     * @return a string
+     */
     public String toString() {
         return "Report number: " + reportNumber + " submitted on: " + date + " " + time + " By: " + reporter;
     }
