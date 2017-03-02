@@ -22,20 +22,29 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/logout" />
 
-    <Button
-        android:text="Edit User Profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editUser"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
-
     <TextView
         android:text="You have successfully logged in. "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Edit User Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editUser"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Source Report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/source_report"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/editUser"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

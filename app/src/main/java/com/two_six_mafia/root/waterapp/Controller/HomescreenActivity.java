@@ -35,6 +35,14 @@ public class HomescreenActivity extends AppCompatActivity {
                 editProfile();
             }
         });
+
+        Button source_report = (Button) findViewById(R.id.source_report);
+        source_report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sourceReport();
+            }
+        });
     }
 
     /**
@@ -51,6 +59,14 @@ public class HomescreenActivity extends AppCompatActivity {
      */
     private void editProfile() {
         Intent intent = new Intent(this, EditProfileActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Takes the user to create a new source report on SourceReport
+     */
+    private void sourceReport() {
+        Intent intent = new Intent(this, SourceReportActivity.class);
         startActivity(intent);
     }
 
