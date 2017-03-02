@@ -5,7 +5,7 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 
 /**
- * Holds the types of Uers
+ * Holds the types of Users
  */
 public enum UserType {
     USER, WORKER, MANAGER, ADMIN

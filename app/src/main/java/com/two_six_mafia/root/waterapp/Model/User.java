@@ -5,8 +5,8 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 
 public class User extends Person {
-    /**
-     *
+    /*
+     * Functionality to be implemented in the future.
      * @return true if the Water Report has been submitted.
      */
     public boolean submitWaterReport() {
