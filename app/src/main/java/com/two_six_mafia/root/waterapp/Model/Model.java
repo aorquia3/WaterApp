@@ -1,4 +1,5 @@
 package com.two_six_mafia.root.waterapp.Model;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,13 +12,16 @@ public class Model {
         return ourInstance;
     }
 
-    private LinkedList<WaterSource> sourceList;
+    private ArrayList<WaterSource> sourceList;
+    private ArrayList<SourceReport> reportList;
 
     //We want to track the user who is currently logged in.
     private Person currentUser;
 
     private Model() {
         currentUser = null;
+        sourceList = new ArrayList<>();
+        reportList = new ArrayList<>();
     }
 
     public void setCurrentUser(Person person) {
@@ -28,12 +32,20 @@ public class Model {
         return currentUser;
     }
 
+    public void addToReports(SourceReport sourceReport) {
+        reportList.add(sourceReport);
+    }
+
     public void addToSources(WaterSource source) {
         sourceList.add(source);
     }
 
-    public List<WaterSource> getSourceList() {
+    public ArrayList<WaterSource> getSourceList() {
         return sourceList;
+    }
+
+    public ArrayList<SourceReport> getReportList() {
+        return reportList;
     }
 
 }

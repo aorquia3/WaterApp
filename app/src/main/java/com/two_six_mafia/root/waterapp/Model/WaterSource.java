@@ -20,7 +20,19 @@ public class WaterSource {
         return sourceReports;
     }
 
+    public void addSourceReport(SourceReport sourceReport) {
+        sourceReports.push(sourceReport);
+    }
+
+    public void setLocation(int location) {
+        this.location = location;
+    }
+
     public int getLocation() {
         return location;
+    }
+
+    public String toString() {
+        return "Water Source at: " + location;
     }
 }

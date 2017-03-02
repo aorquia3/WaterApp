@@ -13,11 +13,19 @@ public class SourceReport {
     private static int REPORT_COUNTER;
 
     private int reportNumber;
-    private int date;
+    private String date;
+    private String time;
     private String reporter;
     private WaterType waterType;
     private WaterCondition waterCondition;
 
+    public SourceReport(String date, String time, String reporter, WaterType waterType, WaterCondition waterCondition) {
+        this.date = date;
+        this.time = time;
+        this.reporter = reporter;
+        this.waterType = waterType;
+        this.waterCondition = waterCondition;
+    }
 
     /**
      * Will get the location
@@ -25,5 +33,9 @@ public class SourceReport {
      */
     public int getLocation() {
         return parent.getLocation();
+    }
+
+    public String toString() {
+        return "Report submitted on: " + date + " " + time + " By: " + reporter;
     }
 }
