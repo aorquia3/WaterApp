@@ -1,22 +1,29 @@
 package com.two_six_mafia.root.waterapp.Controller;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import com.google.android.gms.vision.text.Text;
 import com.two_six_mafia.root.waterapp.Model.Model;
+import com.two_six_mafia.root.waterapp.Model.SourceReport;
 import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
-public class WaterAvailibilityActivity extends FragmentActivity implements OnMapReadyCallback {
+public class WaterAvailibilityActivity extends FragmentActivity implements GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private Marker marker;
+    private SourceReport sourceReport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,7 @@ public class WaterAvailibilityActivity extends FragmentActivity implements OnMap
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -41,14 +49,23 @@ public class WaterAvailibilityActivity extends FragmentActivity implements OnMap
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.setOnInfoWindowClickListener(this);
         Model model = Model.getInstance();
         for (WaterSource source : model.getSourceList()) {
-            mMap.addMarker(new MarkerOptions().position(source.getLocation())
+            marker = mMap.addMarker(new MarkerOptions().position(source.getLocation())
                     .title("Source " + source.getSourceNumber())
                     .snippet("Water Type: " + source.getSourceReports().peek().getWaterType()
                             + ", Latest Water Condition: " + source.getSourceReports().peek().getWaterCondition()));
+            marker.setTag(source.getSourceReports().peek());
             mMap.moveCamera(CameraUpdateFactory.newLatLng(source.getLocation()));
         }
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Intent intent = new Intent(this, SourceViewActivity.class);
+        sourceReport = (SourceReport) marker.getTag();
+        intent.putExtra("SourceReport", sourceReport);
+        startActivity(intent);
     }
 }

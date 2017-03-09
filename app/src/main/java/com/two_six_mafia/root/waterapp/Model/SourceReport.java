@@ -1,13 +1,14 @@
 package com.two_six_mafia.root.waterapp.Model;
 
 import com.google.android.gms.maps.model.LatLng;
+import java.io.Serializable;
 
 /**
  * Created by aaron on 3/1/17.
  * Used with the Water Source class to track initial water reports.
  */
 
-public class SourceReport {
+public class SourceReport implements Serializable {
 
     //Keep track of the water source that this report belongs to.
     private WaterSource parent;
@@ -52,6 +53,18 @@ public class SourceReport {
 
     public WaterCondition getWaterCondition() {
         return waterCondition;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getReporter() {
+        return reporter;
     }
 
     /**
