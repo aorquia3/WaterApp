@@ -9,14 +9,14 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 public enum WaterCondition {
     WASTE("Waste"), TREATABLECLEAR("Treatable Clear"), TREATABLEMUDDY("Treatable Muddy"), POTABLE("Potable");
-    private String rep;
+    private String name;
 
-    WaterCondition(String rep) {
-        this.rep = rep;
+    WaterCondition(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
-        return rep;
+        return name;
     }
 }

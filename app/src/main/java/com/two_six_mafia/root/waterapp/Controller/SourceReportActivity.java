@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.SourceReport;
@@ -30,12 +31,15 @@ public class SourceReportActivity extends AppCompatActivity {
 
     private Spinner waterType;
     private Spinner waterCondition;
-    private EditText userName;
-    private EditText sourceLocation;
     private EditText date;
     private EditText time;
+    private EditText latitude;
+    private EditText longitude;
     private Button add;
     private Button cancel;
+
+    private Double DEFAULT_LAT = -34.0;
+    private Double DEFAULT_LON = 151.0;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -51,8 +55,8 @@ public class SourceReportActivity extends AppCompatActivity {
         //Lots of buttons and spinners
         waterType = (Spinner) findViewById(R.id.waterType);
         waterCondition = (Spinner) findViewById(R.id.waterCondition);
-        userName = (EditText) findViewById(R.id.userName);
-        sourceLocation = (EditText) findViewById(R.id.sourceLocation);
+        latitude = (EditText) findViewById(R.id.latitude);
+        longitude = (EditText) findViewById(R.id.longitude);
         date = (EditText) findViewById(R.id.autoDate);
         time = (EditText) findViewById(R.id.autoTime);
         add = (Button) findViewById(R.id.addSourceReport);
@@ -84,12 +88,15 @@ public class SourceReportActivity extends AppCompatActivity {
         autoDate.setText(date);
         autoTime.setText(time);
 
+        latitude.setText(DEFAULT_LAT.toString());
+        longitude.setText(DEFAULT_LON.toString());
+
         //Set spinners for the watertype and watercondition spinners.
         ArrayAdapter<WaterType> adapter1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterType.values());
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         waterType.setAdapter(adapter1);
 
-        ArrayAdapter<String> adapter2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterCondition.values());
+        ArrayAdapter<WaterCondition> adapter2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item, WaterCondition.values());
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         waterCondition.setAdapter(adapter2);
 
@@ -100,14 +107,14 @@ public class SourceReportActivity extends AppCompatActivity {
      */
     private void add() {
         Model model = Model.getInstance();
-        //Still need to validate user inputs before creating the object.
+
         SourceReport sourceReport = new SourceReport(date.getText().toString(), time.getText().toString(),
-                userName.getText().toString(), (WaterType) waterType.getSelectedItem(),
+                model.getCurrentUser().getName(), (WaterType) waterType.getSelectedItem(),
                 (WaterCondition) waterCondition.getSelectedItem());
         model.addToReports(sourceReport);
 
         WaterSource waterSource = new WaterSource(sourceReport);
-        waterSource.setLocation(Integer.parseInt(sourceLocation.getText().toString()));
+        waterSource.setLocation(new LatLng(Double.parseDouble(latitude.getText().toString()),Double.parseDouble(longitude.getText().toString())));
         model.addToSources(waterSource);
         cancel();
     }

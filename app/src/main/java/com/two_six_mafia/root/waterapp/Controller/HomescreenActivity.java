@@ -51,6 +51,15 @@ public class HomescreenActivity extends AppCompatActivity {
                 viewReports();
             }
         });
+
+        Button viewMap = (Button) findViewById(R.id.viewMap);
+        viewMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewMap();
+            }
+        });
+
     }
 
     /**
@@ -80,6 +89,11 @@ public class HomescreenActivity extends AppCompatActivity {
 
     private void viewReports() {
         Intent intent = new Intent(this, ReportListActivity.class);
+        startActivity(intent);
+    }
+
+    private void viewMap() {
+        Intent intent = new Intent(this, WaterAvailibilityActivity.class);
         startActivity(intent);
     }
 

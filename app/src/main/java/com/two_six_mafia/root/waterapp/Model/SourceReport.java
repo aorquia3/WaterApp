@@ -1,5 +1,7 @@
 package com.two_six_mafia.root.waterapp.Model;
 
+import com.google.android.gms.maps.model.LatLng;
+
 /**
  * Created by aaron on 3/1/17.
  * Used with the Water Source class to track initial water reports.
@@ -40,7 +42,7 @@ public class SourceReport {
      * Will get the location
      * @return location of parent
      */
-    public int getLocation() {
+    public LatLng getLocation() {
         return parent.getLocation();
     }
 

@@ -1,5 +1,7 @@
 package com.two_six_mafia.root.waterapp.Model;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Stack;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Stack;
 
 public class WaterSource {
     //Location currently stored as an int representing LATLONG, this is likely to change in the future.
-    private int location;
+    private LatLng location;
     //Sorting reports in a stack should naturally order them with time.
     private Stack<SourceReport> sourceReports;
 
@@ -42,7 +44,7 @@ public class WaterSource {
      * Set location as an int, needs to be changed upon map integration
      * @param location
      */
-    public void setLocation(int location) {
+    public void setLocation(LatLng location) {
         this.location = location;
     }
 
@@ -50,7 +52,7 @@ public class WaterSource {
      * Returns location
      * @return int location
      */
-    public int getLocation() {
+    public LatLng getLocation() {
         return location;
     }
 

@@ -86,7 +86,7 @@ public class EditProfileActivity extends AppCompatActivity {
      * Sets the cancel button to go to the Welcome Page
      */
     protected void cancel() {
-        Intent intent = new Intent(this, WelcomeActivity.class);
+        Intent intent = new Intent(this, HomescreenActivity.class);
         startActivity(intent);
         finish();
     }

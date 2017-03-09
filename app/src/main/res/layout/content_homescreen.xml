@@ -56,4 +56,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:id="@+id/viewReports" />
+
+    <Button
+        android:text="View Map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewReports"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/viewMap" />
 </RelativeLayout>

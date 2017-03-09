@@ -8,5 +8,15 @@ package com.two_six_mafia.root.waterapp.Model;
  * Holds the types of Users
  */
 public enum UserType {
-    USER, WORKER, MANAGER, ADMIN
+    USER("User"), WORKER("Worker"), MANAGER("Manager"), ADMIN("Admin");
+    private String name;
+
+    UserType(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
