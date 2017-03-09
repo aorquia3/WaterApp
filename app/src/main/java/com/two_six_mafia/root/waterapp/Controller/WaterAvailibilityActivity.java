@@ -44,7 +44,10 @@ public class WaterAvailibilityActivity extends FragmentActivity implements OnMap
 
         Model model = Model.getInstance();
         for (WaterSource source : model.getSourceList()) {
-            mMap.addMarker(new MarkerOptions().position(source.getLocation()));
+            mMap.addMarker(new MarkerOptions().position(source.getLocation())
+                    .title("Source " + source.getSourceNumber())
+                    .snippet("Water Type: " + source.getSourceReports().peek().getWaterType()
+                            + ", Latest Water Condition: " + source.getSourceReports().peek().getWaterCondition()));
             mMap.moveCamera(CameraUpdateFactory.newLatLng(source.getLocation()));
         }
     }

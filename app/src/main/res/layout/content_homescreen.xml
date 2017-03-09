@@ -22,12 +22,31 @@
         android:layout_marginBottom="20dp"
         android:id="@+id/logout" />
 
-    <TextView
-        android:text="You have successfully logged in. "
+    <Button
+        android:text="Create Source Report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/source_report"
+        android:layout_marginTop="58dp"
         android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/viewReports" />
+
+    <Button
+        android:text="View Existing Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:id="@+id/viewReports"
+        android:layout_below="@+id/source_report"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="View Water Availability Map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:id="@+id/viewMap"
+        android:layout_below="@+id/viewReports"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -35,34 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editUser"
-        android:layout_marginTop="51dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Source Report"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/source_report"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/editUser"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="View Reports"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/source_report"
+        android:layout_below="@+id/viewMap"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:id="@+id/viewReports" />
-
-    <Button
-        android:text="View Map"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/viewReports"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:id="@+id/viewMap" />
+        android:layout_marginTop="36dp" />
 </RelativeLayout>

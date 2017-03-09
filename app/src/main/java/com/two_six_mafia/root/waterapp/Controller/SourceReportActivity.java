@@ -125,6 +125,7 @@ public class SourceReportActivity extends AppCompatActivity {
     private void cancel() {
         Intent intent = new Intent(this, HomescreenActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
