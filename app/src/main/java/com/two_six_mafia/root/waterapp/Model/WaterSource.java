@@ -14,6 +14,8 @@ public class WaterSource {
     private LatLng location;
     //Sorting reports in a stack should naturally order them with time.
     private Stack<SourceReport> sourceReports;
+    private static int SOURCE_COUNTER;
+    private int sourceNumber;
 
     /**
      * Default constructor
@@ -22,6 +24,7 @@ public class WaterSource {
     public WaterSource(SourceReport sourceReport) {
         sourceReports = new Stack<>();
         sourceReports.push(sourceReport);
+        sourceNumber = ++SOURCE_COUNTER;
     }
 
     /**
@@ -54,6 +57,10 @@ public class WaterSource {
      */
     public LatLng getLocation() {
         return location;
+    }
+
+    public int getSourceNumber() {
+        return sourceNumber;
     }
 
     /**

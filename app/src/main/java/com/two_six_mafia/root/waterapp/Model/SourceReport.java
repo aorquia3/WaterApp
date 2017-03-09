@@ -46,6 +46,14 @@ public class SourceReport {
         return parent.getLocation();
     }
 
+    public WaterType getWaterType() {
+        return waterType;
+    }
+
+    public WaterCondition getWaterCondition() {
+        return waterCondition;
+    }
+
     /**
      * To string method
      * @return a string
