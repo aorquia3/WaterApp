@@ -10,7 +10,7 @@ import com.two_six_mafia.root.waterapp.R;
 
 public class SourceViewActivity extends AppCompatActivity {
 
-
+    private TextView viewReportTitle;
     private TextView viewType;
     private TextView viewCondition;
     private TextView viewDate;
@@ -26,13 +26,14 @@ public class SourceViewActivity extends AppCompatActivity {
         Intent intent = getIntent();
         sourceReport = (SourceReport) intent.getSerializableExtra("SourceReport");
 
-
+        viewReportTitle = (TextView) findViewById(R.id.viewReportTitle);
         viewType = (TextView) findViewById(R.id.viewType);
         viewCondition = (TextView) findViewById(R.id.viewCondition);
         viewDate = (TextView) findViewById(R.id.viewDate);
         viewTime = (TextView) findViewById(R.id.viewTime);
         viewReporter = (TextView) findViewById(R.id.viewReporter);
 
+        viewReportTitle.setText("Water Source Report: " + sourceReport.getReportNumber());
         viewType.setText(sourceReport.getWaterType().toString());
         viewCondition.setText(sourceReport.getWaterCondition().toString());
         viewDate.setText(sourceReport.getDate());

@@ -67,6 +67,10 @@ public class SourceReport implements Serializable {
         return reporter;
     }
 
+    public int getReportNumber() {
+        return reportNumber;
+    }
+
     /**
      * To string method
      * @return a string
