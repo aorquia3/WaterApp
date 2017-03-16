@@ -20,13 +20,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/add" />
+        android:id="@+id/addPurityReport" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/add"
+        android:layout_alignTop="@+id/addPurityReport"
         android:layout_alignRight="@+id/confirmpassword"
         android:layout_alignEnd="@+id/confirmpassword"
         android:id="@+id/Cancel_Registration" />

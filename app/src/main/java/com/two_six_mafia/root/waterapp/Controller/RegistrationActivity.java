@@ -63,7 +63,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        Button register = (Button) findViewById(R.id.add);
+        Button register = (Button) findViewById(R.id.addPurityReport);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

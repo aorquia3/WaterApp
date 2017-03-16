@@ -18,6 +18,7 @@ public class Model {
 
     private ArrayList<WaterSource> sourceList;
     private ArrayList<SourceReport> reportList;
+    private ArrayList<PurityReport> purityReports;
 
     //We want to track the user who is currently logged in.
     private Person currentUser;
@@ -29,6 +30,7 @@ public class Model {
         currentUser = null;
         sourceList = new ArrayList<>();
         reportList = new ArrayList<>();
+        purityReports = new ArrayList<>();
     }
 
     /**
@@ -61,6 +63,22 @@ public class Model {
      */
     public void addToSources(WaterSource source) {
         sourceList.add(source);
+    }
+
+    /**
+     * Adds a purity report to the list of reports
+     * @param purityReport
+     */
+    public void addToPurityReports(PurityReport purityReport) {
+        purityReports.add(purityReport);
+    }
+
+    /**
+     * Returns a list of the purity reports
+     * @return purityReports;
+     */
+    public ArrayList<PurityReport> getPurityReports() {
+        return purityReports;
     }
 
     /**

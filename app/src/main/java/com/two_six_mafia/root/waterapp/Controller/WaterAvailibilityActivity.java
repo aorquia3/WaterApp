@@ -54,9 +54,9 @@ public class WaterAvailibilityActivity extends FragmentActivity implements Googl
         for (WaterSource source : model.getSourceList()) {
             marker = mMap.addMarker(new MarkerOptions().position(source.getLocation())
                     .title("Source " + source.getSourceNumber())
-                    .snippet("Water Type: " + source.getSourceReports().peek().getWaterType()
-                            + ", Latest Water Condition: " + source.getSourceReports().peek().getWaterCondition()));
-            marker.setTag(source.getSourceReports().peek());
+                    .snippet("Water Type: " + source.getSourceReport().getWaterType()
+                            + ", Latest Water Condition: " + source.getSourceReport().getWaterCondition()));
+            marker.setTag(source.getSourceReport());
             mMap.moveCamera(CameraUpdateFactory.newLatLng(source.getLocation()));
         }
     }

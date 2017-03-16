@@ -36,7 +36,7 @@ public class SourceReport implements Serializable {
         this.reporter = reporter;
         this.waterType = waterType;
         this.waterCondition = waterCondition;
-        this.reportNumber = REPORT_COUNTER++;
+        this.reportNumber = ++REPORT_COUNTER;
     }
 
     /**

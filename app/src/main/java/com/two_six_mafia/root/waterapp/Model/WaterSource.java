@@ -13,7 +13,7 @@ public class WaterSource {
     //Location currently stored as an int representing LATLONG, this is likely to change in the future.
     private LatLng location;
     //Sorting reports in a stack should naturally order them with time.
-    private Stack<SourceReport> sourceReports;
+    private SourceReport sourceReport;
     private static int SOURCE_COUNTER;
     private int sourceNumber;
 
@@ -22,8 +22,7 @@ public class WaterSource {
      * @param sourceReport first sourceReport for a given WaterSource
      */
     public WaterSource(SourceReport sourceReport) {
-        sourceReports = new Stack<>();
-        sourceReports.push(sourceReport);
+        this.sourceReport = sourceReport;
         sourceNumber = ++SOURCE_COUNTER;
     }
 
@@ -31,16 +30,16 @@ public class WaterSource {
      * Return the water source's list of reports
      * @return Stack of sourceReports
      */
-    public Stack<SourceReport> getSourceReports() {
-        return sourceReports;
+    public SourceReport getSourceReport() {
+        return sourceReport;
     }
 
     /**
-     * Add a source report to the water source.
-     * @param sourceReport
+     * Add a purity report to the water source.
+     * @param purityReport
      */
-    public void addSourceReport(SourceReport sourceReport) {
-        sourceReports.push(sourceReport);
+    public void addPurityReport(PurityReport purityReport) {
+        ;
     }
 
     /**

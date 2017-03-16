@@ -24,37 +24,56 @@
 
     <Button
         android:text="Create Source Report"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/source_report"
-        android:layout_marginTop="58dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/viewReports" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
 
     <Button
-        android:text="View Existing Reports"
-        android:layout_width="wrap_content"
+        android:text="View Purity Reports"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:id="@+id/viewReports"
-        android:layout_below="@+id/source_report"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/logout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:id="@+id/viewPurityReports" />
 
     <Button
         android:text="View Water Availability Map"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
         android:id="@+id/viewMap"
-        android:layout_below="@+id/viewReports"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/source_report"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Create Purity Report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/createPurityReport"
+        android:layout_above="@+id/viewPurityReports"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:text="View Source Reports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewReports"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/viewMap"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Edit User Profile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editUser"
-        android:layout_below="@+id/viewMap"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/viewReports"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

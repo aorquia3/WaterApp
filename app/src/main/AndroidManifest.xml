@@ -77,7 +77,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.two_six_mafia.root.waterapp.Controller.HomescreenActivity" />
         </activity>
-        <activity android:name=".Controller.SourceViewActivity"></activity>
+        <activity android:name=".Controller.SourceViewActivity" />
+        <activity android:name=".Controller.PurityReportActivity" />
+        <activity android:name=".Controller.PurityListActivity"></activity>
     </application>
 
 </manifest>
