@@ -97,4 +97,11 @@ public class Model {
         return reportList;
     }
 
+    /**
+     * Removes the current user and sets it to null.
+     */
+    public void removeCurrentUser() {
+        currentUser = null;
+    }
+
 }

@@ -19,6 +19,16 @@ public class PurityReport {
     private double contaminantPPM;
     private LatLng location;
 
+    /**
+     * Creates the purity report
+     * @param date of the report
+     * @param time of the report
+     * @param reporter name of the person who reports it
+     * @param overallCondition the overall condition of the source
+     * @param virusPPM virus parts per million
+     * @param contaminantPPM contaiminent per million
+     * @param location location of water source
+     */
     public PurityReport(String date, String time, String reporter, OverallCondition overallCondition,
                         double virusPPM, double contaminantPPM, LatLng location) {
         this.date = date;

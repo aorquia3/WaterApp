@@ -80,6 +80,9 @@ public class PurityReportActivity extends AppCompatActivity {
         //contaminantPPM.setText(String.valueOf(0.0));
     }
 
+    /**
+     * Adds the purity report to the model
+     */
     private void add() {
         Model model = Model.getInstance();
         if (virusPPM.getText().toString().equals("")) {
@@ -112,6 +115,9 @@ public class PurityReportActivity extends AppCompatActivity {
         cancel();
     }
 
+    /**
+     * Cancels the report
+     */
     private void cancel() {
         Intent intent = new Intent(this, HomescreenActivity.class);
         startActivity(intent);

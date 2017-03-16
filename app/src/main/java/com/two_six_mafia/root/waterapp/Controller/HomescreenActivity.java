@@ -106,6 +106,8 @@ public class HomescreenActivity extends AppCompatActivity {
      */
     private void logout() {
         Intent intent = new Intent(this, WelcomeActivity.class);
+        Model model = Model.getInstance();
+        model.removeCurrentUser();
         startActivity(intent);
         finish();
     }
@@ -134,16 +136,25 @@ public class HomescreenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Views the Reports
+     */
     private void viewReports() {
         Intent intent = new Intent(this, ReportListActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Views the purity reports
+     */
     private void viewPurityReports() {
         Intent intent = new Intent(this, PurityListActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Views the map
+     */
     private void viewMap() {
         Intent intent = new Intent(this, WaterAvailibilityActivity.class);
         startActivity(intent);
