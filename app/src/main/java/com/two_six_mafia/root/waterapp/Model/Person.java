@@ -1,9 +1,5 @@
 package com.two_six_mafia.root.waterapp.Model;
 
-/**
- * Created by aaron on 2/22/17.
- */
-
 public class Person {
     private String username;
     //For now, passwords are still stored in plain text.
@@ -72,8 +68,11 @@ public class Person {
      * Sets the name
      * @param name of user
      */
-    public void setName(String name) {
-        this.name = name;
+    public setName(String name) {
+        if (name.contains(" ")) {
+            this.name = name;
+        }
+        throw new ImproperNameException e;
     }
 
     /**
@@ -100,8 +99,6 @@ public class Person {
         this.email = email;
     }
 
-
-
     /**
      * Sets the UserType
      * @param userType that determines user privileges
@@ -117,14 +114,6 @@ public class Person {
      */
     public boolean checkPassword(String input) {
         return input.equals(password);
-    }
-
-    /**
-     * Updates Password
-     * @param password the new password
-     */
-    public void updatePassword(String password) {
-        this.password = password;
     }
 
     /**
