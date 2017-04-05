@@ -5,11 +5,4 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 
 public class Worker extends User {
-    /**
-     *
-     * @return true if the Purity Report has been submitted.
-     */
-    public boolean submitPurityReport() {
-        return true;
-    }
 }

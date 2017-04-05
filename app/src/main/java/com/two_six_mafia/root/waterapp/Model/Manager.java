@@ -5,19 +5,4 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 
 public class Manager extends Worker {
-    /**
-     *
-     * @return true if historical report exists
-     */
-    public boolean viewHistoricalReport() {
-        return true;
-    }
-
-    /**
-     *
-     * @return true if a report has been deleted.
-     */
-    public boolean deleteReport() {
-        return true;
-    }
 }

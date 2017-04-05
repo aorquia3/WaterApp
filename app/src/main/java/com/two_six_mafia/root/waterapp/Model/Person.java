@@ -1,5 +1,12 @@
 package com.two_six_mafia.root.waterapp.Model;
 
+import android.provider.ContactsContract;
+
+import com.two_six_mafia.root.waterapp.Exceptions.EmailFormatException;
+import com.two_six_mafia.root.waterapp.Exceptions.NameFormatException;
+import com.two_six_mafia.root.waterapp.Exceptions.PasswordFormatException;
+import com.two_six_mafia.root.waterapp.Exceptions.UsernameFormatException;
+
 public class Person {
     private String username;
     //For now, passwords are still stored in plain text.
@@ -68,18 +75,32 @@ public class Person {
      * Sets the name
      * @param name of user
      */
-    public setName(String name) {
-        if (name.contains(" ")) {
-            this.name = name;
+    public void setName(String name) throws NameFormatException {
+        if (name == null || name.equals("")) {
+            throw new NameFormatException("Please enter your first and last name.");
+        } else if (!name.contains(" ")) {
+            throw new NameFormatException("First and last name must be separated by a space.");
+        } else if (name.length() < 5) {
+            throw new NameFormatException("Name must be at least five characters.");
         }
-        throw new ImproperNameException e;
+
+        this.name = name;
     }
 
     /**
-     * Sets USername
+     * Sets Username
      * @param username of the user
      */
-    public void setUsername(String username) {
+    public void setUsername(String username) throws UsernameFormatException {
+        UserList userList = UserList.getInstance();
+        if (username.length() < 2) {
+            throw new UsernameFormatException("Username must be at least two characters.");
+        } else if (userList.isRegisteredUser(username)) {
+            throw new UsernameFormatException("This username already exists in our system.");
+        } else if (username.contains("fuck")) {
+            throw new UsernameFormatException("Language!");
+        }
+
         this.username = username;
     }
 
@@ -87,7 +108,12 @@ public class Person {
      * Sets Password
      * @param password of the user
      */
-    public void setPassword(String password) {
+    public void setPassword(String password) throws PasswordFormatException {
+        if (password.length() < 4) {
+            throw new PasswordFormatException( "Password must be at least 4 characters.");
+        } else if (password.equalsIgnoreCase(username)) {
+            throw new PasswordFormatException("Don't use your username as your password.");
+        }
         this.password = password;
     }
 
@@ -95,7 +121,11 @@ public class Person {
      * Allows users to change their email address
      * @param email the new email address
      */
-    public void setEmail(String email) {
+    public void setEmail(String email) throws EmailFormatException {
+        if (!email.contains("@") || !email.contains(".com")) {
+            throw new EmailFormatException("Not a valid email address.");
+        }
+
         this.email = email;
     }
 

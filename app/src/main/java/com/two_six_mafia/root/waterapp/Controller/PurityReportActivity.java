@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.two_six_mafia.root.waterapp.Model.Model;
@@ -86,34 +85,34 @@ public class PurityReportActivity extends AppCompatActivity {
     private void add() {
         Model model = Model.getInstance();
         if (virusPPM.getText().toString().equals("")) {
-            Toast.makeText(this, "Please enter virus PPM.", Toast.LENGTH_SHORT).show();
+            virusPPM.setError("Please enter virus PPM.");
             return;
             //virusPPM.setText(String.valueOf(0.0));
         }
         if (contaminantPPM.getText().toString().equals("")) {
-            Toast.makeText(this, "Please enter contaminant PPM.", Toast.LENGTH_SHORT).show();
+            contaminantPPM.setError("Please enter contaminant PPM.");
             return;
             //contaminantPPM.setText(String.valueOf(0.0));
         }
         if (latitude.getText().toString().equals("")) {
-            Toast.makeText(this, "Please enter a latitude", Toast.LENGTH_SHORT).show();
+            latitude.setError("Please enter a latitude");
             return;
         }
         if (longitude.getText().toString().equals("")) {
-            Toast.makeText(this, "Please enter a longitude", Toast.LENGTH_SHORT).show();
+            longitude.setError("Please enter a longitude");
             return;
         }
 
-        PurityReport purityReport = new PurityReport(date, time, model.getCurrentUser().getName(),
-                (OverallCondition) overallCondition.getSelectedItem(),
-                Double.parseDouble(virusPPM.getText().toString()),
-                Double.parseDouble(contaminantPPM.getText().toString()),
-                new LatLng(Double.parseDouble(latitude.getText().toString()), Double.parseDouble(
-                        longitude.getText().toString())));
+    PurityReport purityReport = new PurityReport(date, time, model.getCurrentUser().getName(),
+            (OverallCondition) overallCondition.getSelectedItem(),
+            Double.parseDouble(virusPPM.getText().toString()),
+            Double.parseDouble(contaminantPPM.getText().toString()),
+            new LatLng(Double.parseDouble(latitude.getText().toString()), Double.parseDouble(
+                    longitude.getText().toString())));
 
         model.addToPurityReports(purityReport);
-        cancel();
-    }
+    cancel();
+}
 
     /**
      * Cancels the report

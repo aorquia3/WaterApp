@@ -14,7 +14,7 @@ public class Model {
     private Model() {
         currentUser = null;
         sourceList = new ArrayList<>();
-        //reportList = new ArrayList<>();
+        reportList = new ArrayList<>();
         purityReports = new ArrayList<>();
     }
 
@@ -28,7 +28,7 @@ public class Model {
 
     //Store the list of sources,
     private final ArrayList<WaterSource> sourceList;
-    //private final ArrayList<SourceReport> reportList;
+    private final ArrayList<SourceReport> reportList;
     private final ArrayList<PurityReport> purityReports;
 
     //Store the user who is currently logged in to determine access levels.
@@ -54,7 +54,7 @@ public class Model {
      * Add to the Source Report
      * @param sourceReport that's being submitted
      */
-    /*public void addToReports(SourceReport sourceReport) {
+    public void addToReports(SourceReport sourceReport) {
         reportList.add(sourceReport);
     }
 
@@ -94,7 +94,6 @@ public class Model {
      * Gets the Report List
      * @return reportList
      */
-    /*
     public ArrayList<SourceReport> getReportList() {
         return reportList;
     }

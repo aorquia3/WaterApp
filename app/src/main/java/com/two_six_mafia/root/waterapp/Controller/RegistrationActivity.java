@@ -10,12 +10,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import com.two_six_mafia.root.waterapp.Exceptions.EmailFormatException;
+import com.two_six_mafia.root.waterapp.Exceptions.NameFormatException;
+import com.two_six_mafia.root.waterapp.Exceptions.PasswordFormatException;
+import com.two_six_mafia.root.waterapp.Exceptions.UsernameFormatException;
 import com.two_six_mafia.root.waterapp.Model.Person;
 import com.two_six_mafia.root.waterapp.Model.UserType;
 import com.two_six_mafia.root.waterapp.Model.*;
@@ -109,17 +114,28 @@ public class RegistrationActivity extends AppCompatActivity {
                 user = new User();
                 break;
         }
-        user.setName(nameField.getText().toString());
-        user.setUsername(usernameField.getText().toString());
-        user.setEmail(emailField.getText().toString());
-        user.setPassword(passwordField.getText().toString());
-        user.setUserType(type);
 
-        //Add the user to registered users
-        users.addUser(user);
+        try {
+            user.setName(nameField.getText().toString());
+            user.setUsername(usernameField.getText().toString());
+            user.setEmail(emailField.getText().toString());
+            user.setPassword(passwordField.getText().toString());
+            user.setUserType(type);
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+
+            //Add the user to registered users
+            users.addUser(user);
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        } catch(NameFormatException e) {
+            nameField.setError(e.toString());
+        } catch(EmailFormatException e) {
+            emailField.setError(e.toString());
+        } catch(UsernameFormatException e) {
+            usernameField.setError(e.toString());
+        } catch(PasswordFormatException e) {
+            passwordField.setError(e.toString());
+        }
     }
 
     /**
