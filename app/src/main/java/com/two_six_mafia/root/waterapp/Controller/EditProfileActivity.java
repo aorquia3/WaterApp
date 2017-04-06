@@ -81,7 +81,11 @@ public class EditProfileActivity extends AppCompatActivity {
             currentUser.setName(nameField.getText().toString());
             currentUser.setPassword(passwordField.getText().toString());
 
-            database.updateUser();
+            int row = database.updateUser(currentUser, nameField.getText().toString(),
+                    emailField.getText().toString(), passwordField.getText().toString());
+            Toast.makeText(this, "Updated profile in database at row " + row, Toast.LENGTH_SHORT)
+                    .show();
+
             Intent intent = new Intent(this, HomescreenActivity.class);
             startActivity(intent);
         } catch(Exception e) {

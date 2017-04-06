@@ -35,12 +35,25 @@ public class Database {
     public long addUser(Person person) {
         ContentValues values = new ContentValues();
         values.put(DBContract.Users.KEY_NAME, person.getName());
-        values.put(DBContract.Users.KEY_USERNAME, person.getUsername().toString());
-        values.put(DBContract.Users.KEY_EMAIL, person.getEmail().toString());
-        values.put(DBContract.Users.KEY_PASSWORD, person.getPassword().toString());
+        values.put(DBContract.Users.KEY_USERNAME, person.getUsername());
+        values.put(DBContract.Users.KEY_EMAIL, person.getEmail());
+        values.put(DBContract.Users.KEY_PASSWORD, person.getPassword());
         values.put(DBContract.Users.KEY_USERTYPE, person.getUserType().toString());
 
         return database.insert(DBContract.Users.TABLE_NAME, null, values);
+    }
+
+    public int updateUser(Person person, String name, String email, String password) {
+        ContentValues values = new ContentValues();
+        values.put(DBContract.Users.KEY_NAME,name);
+        values.put(DBContract.Users.KEY_USERNAME, person.getUsername());
+        values.put(DBContract.Users.KEY_EMAIL, email);
+        values.put(DBContract.Users.KEY_PASSWORD, password);
+        values.put(DBContract.Users.KEY_USERTYPE, person.getUserType().toString());
+
+        return database.update(DBContract.Users.TABLE_NAME, values,
+                String.format("%s = ?", DBContract.Users.KEY_USERNAME),
+                new String[]{person.getUsername()});
     }
 
     public long addSource(WaterSource waterSource) {
@@ -71,10 +84,6 @@ public class Database {
 
 
         return database.insert(DBContract.Purity.TABLE_NAME, null, values);
-    }
-
-    public void updateUser() {
-
     }
 
     public List<Person> getUserList() {

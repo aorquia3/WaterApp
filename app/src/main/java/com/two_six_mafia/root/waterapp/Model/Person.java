@@ -14,12 +14,14 @@ public class Person {
     private String name;
     private String email;
     private UserType userType;
+    private int id;
+    private static int USERNUMBER = 0;
 
     /**
      * Default Constructor
      */
     public Person() {
-
+        id = ++USERNUMBER;
     }
 
     /**
@@ -36,6 +38,7 @@ public class Person {
         this.name = name;
         this.email = email;
         this.userType = userType;
+        id = ++USERNUMBER;
     }
 
     /**
