@@ -1,5 +1,7 @@
 package com.two_six_mafia.root.waterapp.Model;
 
+import android.provider.ContactsContract;
+
 import com.two_six_mafia.root.waterapp.Exceptions.EmailFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.NameFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.PasswordFormatException;
@@ -16,9 +18,8 @@ public class Person {
     /**
      * Default Constructor
      */
-    Person() {
-        this.username = null;
-        this.password = null;
+    public Person() {
+
     }
 
     /**
@@ -41,7 +42,7 @@ public class Person {
      * Gets the Username
      * @return a string of the username
      */
-    String getUsername() {
+    public String getUsername() {
         return username;
     }
 
@@ -142,6 +143,10 @@ public class Person {
      */
     public boolean checkPassword(String input) {
         return input.equals(password);
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     /**

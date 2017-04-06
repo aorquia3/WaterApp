@@ -1,5 +1,7 @@
 package com.two_six_mafia.root.waterapp.Controller;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.content.Intent;
@@ -36,6 +38,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText usernameField;
     private EditText passwordField;
     private EditText confirmPasswordField;
+    private Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,9 @@ public class RegistrationActivity extends AppCompatActivity {
                 register();
             }
         });
+
+        database = new Database(this);
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -122,6 +128,12 @@ public class RegistrationActivity extends AppCompatActivity {
 
             //Add the user to registered users
             users.addUser(user);
+
+            //Add user to the database
+            long row  = database.addUser(user);
+            Toast.makeText(this, "New user registered to database at row "
+                    + row, Toast.LENGTH_LONG).show();
+
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         } catch(NameFormatException e) {

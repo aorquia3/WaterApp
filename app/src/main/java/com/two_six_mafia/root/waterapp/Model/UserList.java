@@ -1,5 +1,8 @@
 package com.two_six_mafia.root.waterapp.Model;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 import java.util.HashMap;
 
 /**
@@ -20,7 +23,7 @@ public class UserList {
     }
 
     /**
-     * Default contstructor.
+     * Default constructor.
      */
     private UserList() {
         users = new HashMap<>();

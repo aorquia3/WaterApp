@@ -79,6 +79,14 @@ public class HomescreenActivity extends AppCompatActivity {
             }
         });
 
+        Button viewGraph = (Button) findViewById(R.id.viewGraph);
+        viewGraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewGraph();
+            }
+        });
+
         Model model = Model.getInstance();
 
         //Only lets certain user types access features.
@@ -99,6 +107,11 @@ public class HomescreenActivity extends AppCompatActivity {
             viewPurityReports.setEnabled(true);
         }
 
+    }
+
+    private void viewGraph() {
+        Intent intent = new Intent(this, HistoricalGraphActivity.class);
+        startActivity(intent);
     }
 
     /**

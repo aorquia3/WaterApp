@@ -3,6 +3,7 @@ package com.two_six_mafia.root.waterapp.Controller;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Intent;
@@ -33,11 +34,15 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
+import com.two_six_mafia.root.waterapp.Model.DBContract;
+import com.two_six_mafia.root.waterapp.Model.DBHelper;
 import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.Person;
 import com.two_six_mafia.root.waterapp.Model.UserList;
+import com.two_six_mafia.root.waterapp.Model.UserType;
 import com.two_six_mafia.root.waterapp.R;
 
 import static com.two_six_mafia.root.waterapp.R.id.username;
@@ -104,6 +109,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
 
     /**
      * Attempts to sign in or register the account specified by the login form.
