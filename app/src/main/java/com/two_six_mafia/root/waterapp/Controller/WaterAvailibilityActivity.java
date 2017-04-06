@@ -3,17 +3,14 @@ package com.two_six_mafia.root.waterapp.Controller;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import com.google.android.gms.vision.text.Text;
 import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.SourceReport;
 import com.two_six_mafia.root.waterapp.Model.WaterSource;

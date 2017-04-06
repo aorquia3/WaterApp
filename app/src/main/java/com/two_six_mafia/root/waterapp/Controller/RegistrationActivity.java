@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -21,8 +20,6 @@ import com.two_six_mafia.root.waterapp.Exceptions.EmailFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.NameFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.PasswordFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.UsernameFormatException;
-import com.two_six_mafia.root.waterapp.Model.Person;
-import com.two_six_mafia.root.waterapp.Model.UserType;
 import com.two_six_mafia.root.waterapp.Model.*;
 import com.two_six_mafia.root.waterapp.R;
 

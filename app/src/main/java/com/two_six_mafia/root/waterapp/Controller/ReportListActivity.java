@@ -7,11 +7,9 @@ import android.widget.ListView;
 
 import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.SourceReport;
-import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ReportListActivity extends AppCompatActivity {

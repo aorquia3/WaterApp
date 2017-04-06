@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import com.two_six_mafia.root.waterapp.Model.Manager;
 import com.two_six_mafia.root.waterapp.Model.Model;
-import com.two_six_mafia.root.waterapp.Model.PurityReport;
 import com.two_six_mafia.root.waterapp.Model.Worker;
 import com.two_six_mafia.root.waterapp.R;
 

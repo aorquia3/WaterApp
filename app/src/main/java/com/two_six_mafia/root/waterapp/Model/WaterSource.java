@@ -2,7 +2,7 @@ package com.two_six_mafia.root.waterapp.Model;
 
 import com.google.android.gms.maps.model.LatLng;
 
-import java.util.Stack;
+
 
 /**
  * Created by aaron on 3/1/17.
