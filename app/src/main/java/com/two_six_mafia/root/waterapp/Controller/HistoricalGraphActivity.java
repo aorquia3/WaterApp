@@ -11,6 +11,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.two_six_mafia.root.waterapp.Model.PurityReport;
 import com.two_six_mafia.root.waterapp.R;
 
 public class HistoricalGraphActivity extends AppCompatActivity {
@@ -23,6 +24,18 @@ public class HistoricalGraphActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
+    static public class GraphViewData {
+        public final double valueX;
+        public final double valueY;
+        public final String valueDate;
+
+        public GraphViewData(double valueX, double valueY,String valueDate) {
+            super();
+            this.valueX = valueX;
+            this.valueY = valueY;
+            this.valueDate = valueDate;
+        }
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +48,8 @@ public class HistoricalGraphActivity extends AppCompatActivity {
         x = -5.0;
         GraphView graph = (GraphView) findViewById(R.id.graph);
         series = new LineGraphSeries<>();
+
+
         for (int i = 0; i < 500; i++) {
             x = x + .1;
             y = 5 * x;
