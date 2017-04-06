@@ -16,7 +16,7 @@ public class WaterSource implements Serializable {
     private double lon;
     private final int sourceNumber;
 
-    private static int SOURCE_COUNTER;
+    public static int SOURCE_COUNTER;
 
     private final String date;
     private final String time;
@@ -52,6 +52,7 @@ public class WaterSource implements Serializable {
      */
     public void addPurityReport(PurityReport purityReport) {
     }
+
 
     /**
      * Set location as a lat/long

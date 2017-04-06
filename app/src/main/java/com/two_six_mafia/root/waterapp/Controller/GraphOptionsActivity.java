@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.two_six_mafia.root.waterapp.Model.GraphType;
+import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
 import java.io.Serializable;
@@ -26,6 +27,7 @@ public class GraphOptionsActivity extends AppCompatActivity {
 
         graphType = (Spinner) findViewById(R.id.graphType);
         sourceNumber = (EditText) findViewById(R.id.sourceNumber);
+        sourceNumber.setText("-1");
 
         ArrayAdapter<GraphType> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, GraphType.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -41,8 +43,14 @@ public class GraphOptionsActivity extends AppCompatActivity {
     }
 
     private void goGraph() {
-        Intent intent = new Intent(this, HistoricalGraphActivity.class);
-        intent.putExtra("type", (Serializable) graphType.getSelectedItem());
-        startActivity(intent);
+        int source =Integer.parseInt(sourceNumber.getText().toString());
+        if ( source < 0 || source > WaterSource.SOURCE_COUNTER) {
+            sourceNumber.setError("Please pick a valid water source.");
+        } else {
+            Intent intent = new Intent(this, HistoricalGraphActivity.class);
+            intent.putExtra("type", (Serializable) graphType.getSelectedItem());
+            intent.putExtra("source", source);
+            startActivity(intent);
+        }
     }
 }

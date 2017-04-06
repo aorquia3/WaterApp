@@ -41,6 +41,15 @@ public class Model {
         this.currentUser = person;
     }
 
+
+    public WaterSource getSourceByID(int id) {
+        for (WaterSource source : sourceList) {
+            if (id == source.getSourceNumber());
+            return source;
+        }
+        return null;
+    }
+
     /**
      * Get's current user
      * @return current user

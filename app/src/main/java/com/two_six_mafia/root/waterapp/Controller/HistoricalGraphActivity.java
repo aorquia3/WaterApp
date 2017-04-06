@@ -12,7 +12,9 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.two_six_mafia.root.waterapp.Model.GraphType;
+import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.PurityReport;
+import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
 public class HistoricalGraphActivity extends AppCompatActivity {
@@ -25,11 +27,13 @@ public class HistoricalGraphActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
-    private int dateToint() {
+    private int dateToInt() {
         return 10;
     }
 
-    GraphType graphType = (GraphType) getIntent().getSerializableExtra("type");
+    GraphType graphType;
+    int source;
+    WaterSource waterSource;
 
     private void chooseGraph() {
         if(graphType.equals(GraphType.VIRUS)) {
@@ -66,6 +70,11 @@ public class HistoricalGraphActivity extends AppCompatActivity {
             series.appendData(new DataPoint(x, y), true, 500);
         }
         graph.addSeries(series);
+
+        Model model = Model.getInstance();
+        graphType = (GraphType) getIntent().getSerializableExtra("type");
+        source = (int) getIntent().getSerializableExtra("source");
+        waterSource = model.getSourceByID(source);
 
     }
 
