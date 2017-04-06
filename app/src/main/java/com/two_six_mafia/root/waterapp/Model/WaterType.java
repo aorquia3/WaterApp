@@ -10,7 +10,7 @@ package com.two_six_mafia.root.waterapp.Model;
 public enum WaterType {
     BOTTLED("Bottled"), WELL("Well"), STREAM("Stream"), LAKE("Lake"), SPRING("Spring"), OTHER("Other");
 
-    private String name;
+    private final String name;
 
     WaterType(String name) {
         this.name = name;

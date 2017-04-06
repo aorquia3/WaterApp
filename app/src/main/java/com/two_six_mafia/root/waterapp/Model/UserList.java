@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class UserList {
     private static final UserList userList = new UserList();
-    private HashMap<String, Person> users;
+    private final HashMap<String, Person> users;
 
     /**
      * Returns the user list for the application
@@ -23,7 +23,7 @@ public class UserList {
      * Default contstructor.
      */
     private UserList() {
-        users = new HashMap<String, Person>();
+        users = new HashMap<>();
     }
 
     /**

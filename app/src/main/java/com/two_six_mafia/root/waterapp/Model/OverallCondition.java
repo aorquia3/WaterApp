@@ -6,7 +6,7 @@ package com.two_six_mafia.root.waterapp.Model;
 
 public enum OverallCondition {
     SAFE("Safe"), TREATABLE("Treatable"), UNSAFE("Unsafe");
-    private String name;
+    private final String name;
 
     OverallCondition(String name){
         this.name = name;

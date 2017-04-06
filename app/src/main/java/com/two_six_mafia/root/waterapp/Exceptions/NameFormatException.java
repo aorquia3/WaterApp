@@ -5,7 +5,7 @@ package com.two_six_mafia.root.waterapp.Exceptions;
  */
 
 public class NameFormatException extends Exception {
-    private String message;
+    private final String message;
     public NameFormatException(String s) {
         message = s;
     }

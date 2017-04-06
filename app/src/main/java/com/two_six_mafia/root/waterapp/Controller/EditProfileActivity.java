@@ -71,7 +71,7 @@ public class EditProfileActivity extends AppCompatActivity {
         });
     }
 
-    protected void save() {
+    private void save() {
         Model model = Model.getInstance();
         Person currentUser = model.getCurrentUser();
         try {
@@ -88,7 +88,7 @@ public class EditProfileActivity extends AppCompatActivity {
     /**
      * Sets the cancel button to go to the Welcome Page
      */
-    protected void cancel() {
+    private void cancel() {
         Intent intent = new Intent(this, HomescreenActivity.class);
         startActivity(intent);
         finish();
@@ -98,7 +98,7 @@ public class EditProfileActivity extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
+    private Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("EditProfileActivity Page") // TODO: Define a title for the content shown.
                 // TODO: Make sure this auto-generated URL is correct.

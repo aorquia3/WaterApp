@@ -10,14 +10,14 @@ public class PurityReport {
 
     private static int REPORT_COUNTER;
 
-    private int reportNumber;
-    private String date;
-    private String time;
-    private String reporter;
-    private OverallCondition overallCondition;
-    private double virusPPM;
-    private double contaminantPPM;
-    private LatLng location;
+    private final int reportNumber;
+    private final String date;
+    private final String time;
+    private final String reporter;
+    private final OverallCondition overallCondition;
+    private final double virusPPM;
+    private final double contaminantPPM;
+    private final LatLng location;
 
     /**
      * Creates the purity report

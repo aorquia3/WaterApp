@@ -13,9 +13,9 @@ public class WaterSource {
     //Location currently stored as an int representing LATLONG, this is likely to change in the future.
     private LatLng location;
     //Sorting reports in a stack should naturally order them with time.
-    private SourceReport sourceReport;
+    private final SourceReport sourceReport;
     private static int SOURCE_COUNTER;
-    private int sourceNumber;
+    private final int sourceNumber;
 
     /**
      * Default constructor

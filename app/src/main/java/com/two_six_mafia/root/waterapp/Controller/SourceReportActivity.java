@@ -33,8 +33,8 @@ public class SourceReportActivity extends AppCompatActivity {
     private Button add;
     private Button cancel;
 
-    private Double DEFAULT_LAT = -34.0;
-    private Double DEFAULT_LON = 151.0;
+    private final Double DEFAULT_LAT = -34.0;
+    private final Double DEFAULT_LON = 151.0;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.

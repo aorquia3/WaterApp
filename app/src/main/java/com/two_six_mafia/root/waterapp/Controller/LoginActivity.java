@@ -250,7 +250,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
+    private Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Login Page") // TODO: Define a title for the content shown.
                 // TODO: Make sure this auto-generated URL is correct.
@@ -332,11 +332,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // TODO: register the new account here.*/
 
             UserList users = UserList.getInstance();
-            if (users.isRegisteredUser(mUsername)) {
-                return users.getUser(mUsername).checkPassword(mPassword);
-            }
+            return users.isRegisteredUser(mUsername) && users.getUser(mUsername).checkPassword(mPassword);
 
-            return false;
         }
 
         @Override

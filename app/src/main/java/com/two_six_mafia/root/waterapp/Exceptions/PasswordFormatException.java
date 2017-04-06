@@ -5,7 +5,7 @@ package com.two_six_mafia.root.waterapp.Exceptions;
  */
 
 public class PasswordFormatException extends Exception {
-    public String message;
+    private final String message;
     public PasswordFormatException(String s) {
         message = s;
     }

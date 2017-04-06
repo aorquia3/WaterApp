@@ -14,7 +14,7 @@ import com.two_six_mafia.root.waterapp.R;
 
 public class HistoricalGraphActivity extends AppCompatActivity {
 
-    LineGraphSeries<com.jjoe64.graphview.series.DataPoint> series;
+    private LineGraphSeries<com.jjoe64.graphview.series.DataPoint> series;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -44,7 +44,7 @@ public class HistoricalGraphActivity extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
+    private Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("HistoricalGraph Page") // TODO: Define a title for the content shown.
                 // TODO: Make sure this auto-generated URL is correct.

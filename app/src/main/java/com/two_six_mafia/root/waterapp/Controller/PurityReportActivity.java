@@ -29,8 +29,8 @@ public class PurityReportActivity extends AppCompatActivity {
     private Button addPurityReport;
     private Button cancelPurityReport;
 
-    private Double DEFAULT_LAT = -34.0;
-    private Double DEFAULT_LON = 151.0;
+    private final Double DEFAULT_LAT = -34.0;
+    private final Double DEFAULT_LON = 151.0;
 
     private String date;
     private String time;

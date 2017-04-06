@@ -9,7 +9,7 @@ package com.two_six_mafia.root.waterapp.Model;
  */
 public enum UserType {
     USER("User"), WORKER("Worker"), MANAGER("Manager"), ADMIN("Admin");
-    private String name;
+    private final String name;
 
     UserType(String name) {
         this.name = name;

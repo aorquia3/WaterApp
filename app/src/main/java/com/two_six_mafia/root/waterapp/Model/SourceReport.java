@@ -15,12 +15,12 @@ public class SourceReport implements Serializable {
     //Count the total number of reports
     private static int REPORT_COUNTER;
 
-    private int reportNumber;
-    private String date;
-    private String time;
-    private String reporter;
-    private WaterType waterType;
-    private WaterCondition waterCondition;
+    private final int reportNumber;
+    private final String date;
+    private final String time;
+    private final String reporter;
+    private final WaterType waterType;
+    private final WaterCondition waterCondition;
 
     /**
      * Constructs the source report

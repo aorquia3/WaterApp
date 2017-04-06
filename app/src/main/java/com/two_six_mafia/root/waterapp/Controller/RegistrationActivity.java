@@ -80,7 +80,7 @@ public class RegistrationActivity extends AppCompatActivity {
     /**
      * Sets the cancel button to go to the Welcome Page
      */
-    protected void cancel() {
+    private void cancel() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
         finish();
@@ -89,7 +89,7 @@ public class RegistrationActivity extends AppCompatActivity {
     /**
      * Protects against entering blank registration
      */
-    protected void register() {
+    private void register() {
         Person user;
         UserList users = UserList.getInstance();
 
@@ -139,7 +139,7 @@ public class RegistrationActivity extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
+    private Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Registration Page") // TODO: Define a title for the content shown.
                 // TODO: Make sure this auto-generated URL is correct.
