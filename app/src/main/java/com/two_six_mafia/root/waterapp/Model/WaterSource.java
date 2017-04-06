@@ -26,13 +26,13 @@ public class WaterSource implements Serializable {
 
     /**
      *
-     * @param date
-     * @param time
-     * @param reporter
-     * @param waterType
-     * @param waterCondition
-     * @param lat
-     * @param lon
+     * @param date of the source
+     * @param time the report was submitted
+     * @param reporter who it is reported by
+     * @param waterType what type of water source the source is
+     * @param waterCondition what condition the water source is in
+     * @param lat lattitude of the source
+     * @param lon longitutde of the source
      */
     public WaterSource(String date, String time, String reporter, WaterType waterType, WaterCondition waterCondition, double lat, double lon) {
         this.date = date;
