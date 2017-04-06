@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +55,22 @@ public class Database {
         values.put(DBContract.Source.KEY_CONDITION, waterSource.getWaterCondition().toString());
 
         return database.insert(DBContract.Source.TABLE_NAME, null, values);
+    }
+
+    public long addPurityReport(PurityReport purityReport) {
+        ContentValues values = new ContentValues();
+        values.put(DBContract.Purity.KEY_LAT, purityReport.getLocation().latitude);
+        values.put(DBContract.Purity.KEY_LON, purityReport.getLocation().longitude);
+        values.put(DBContract.Purity.KEY_REPORT, purityReport.getReportNumber());
+        values.put(DBContract.Purity.KEY_DATE, purityReport.getDate());
+        values.put(DBContract.Purity.KEY_TIME, purityReport.getTime());
+        values.put(DBContract.Purity.KEY_REPORTER, purityReport.getReporter());
+        values.put(DBContract.Purity.KEY_CONDITION, purityReport.getOverallCondition().toString());
+        values.put(DBContract.Purity.KEY_VIRUS, purityReport.getVirusPPM());
+        values.put(DBContract.Purity.KEY_CONTAMINANT, purityReport.getContaminantPPM());
+
+
+        return database.insert(DBContract.Purity.TABLE_NAME, null, values);
     }
 
     public List<Person> getUserList() {
@@ -158,6 +176,52 @@ public class Database {
                             waterType, waterCondition,
                             Double.parseDouble(cursor.getString(cursor.getColumnIndex(DBContract.Source.KEY_LAT))),
                             Double.parseDouble(cursor.getString(cursor.getColumnIndex(DBContract.Source.KEY_LON)))
+                    ));
+
+                } catch (Exception e) {
+                    System.out.println("HOUSTON WE HAVE A PROBLEM: " + e);
+                    return;
+                }
+
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+    }
+
+    public void populatePurityReports() {
+        String selectQuery = "SELECT * FROM " + DBContract.Purity.TABLE_NAME;
+        Cursor cursor = database.rawQuery(selectQuery, null);
+        Model model = Model.getInstance();
+        //System.out.println(DatabaseUtils.dumpCursorToString(cursor));
+        if (cursor.moveToFirst()) {
+            do {
+                try {
+                    OverallCondition overallCondition;
+                    String condition = cursor.getString(cursor.getColumnIndex(DBContract.Purity.KEY_CONDITION));
+                    switch (condition) {
+                        case "Safe":
+                            overallCondition = OverallCondition.SAFE;
+                            break;
+                        case "Treatable":
+                            overallCondition = OverallCondition.TREATABLE;
+                            break;
+                        case "Unsafe":
+                            overallCondition = OverallCondition.UNSAFE;
+                            break;
+                        default:
+                            overallCondition = OverallCondition.UNSAFE;
+                            break;
+                    }
+
+                    model.addToPurityReports(new PurityReport(
+                            cursor.getString(cursor.getColumnIndex(DBContract.Purity.KEY_DATE)),
+                            cursor.getString(cursor.getColumnIndex(DBContract.Purity.KEY_TIME)),
+                            cursor.getString(cursor.getColumnIndex(DBContract.Purity.KEY_REPORTER)),
+                            overallCondition,
+                            Double.parseDouble(cursor.getString(cursor.getColumnIndex(DBContract.Purity.KEY_VIRUS))),
+                            Double.parseDouble(cursor.getString(cursor.getColumnIndex(DBContract.Purity.KEY_CONTAMINANT))),
+                            new LatLng(Double.parseDouble(cursor.getString(cursor.getColumnIndex(DBContract.Source.KEY_LAT))),
+                            Double.parseDouble(cursor.getString(cursor.getColumnIndex(DBContract.Source.KEY_LON))))
                     ));
 
                 } catch (Exception e) {

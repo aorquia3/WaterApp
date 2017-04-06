@@ -61,28 +61,30 @@ public class DBContract {
 
     public static class Purity implements BaseColumns {
 
-        public static final String TABLE_NAME = "sourceTable";
+        public static final String TABLE_NAME = "purityTable";
         public static final String KEY_LAT = "Latitude";
         public static final String KEY_LON = "Longitude";
-        public static final String KEY_SOURCE = "SourceNumber";
+        public static final String KEY_REPORT = "reportNumber";
         public static final String KEY_DATE = "Date";
         public static final String KEY_TIME = "Time";
         public static final String KEY_REPORTER = "Reporter";
-        public static final String KEY_TYPE = "WaterType";
-        public static final String KEY_CONDITION = "WaterCondition";
+        public static final String KEY_CONDITION = "OverallCondition";
+        public static final String KEY_VIRUS = "VirusPPM";
+        public static final String KEY_CONTAMINANT = "ContaminantPPM";
 
         public static final String CREATE_SOURCE_TABLE = "CREATE TABLE " + TABLE_NAME
                 + " (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + KEY_LAT + " REAL,"
                 + KEY_LON + " REAL,"
-                + KEY_SOURCE + " INTEGER,"
+                + KEY_REPORT + " INTEGER,"
                 + KEY_DATE + " TEXT,"
                 + KEY_TIME + " TEXT,"
                 + KEY_REPORTER + " TEXT,"
-                + KEY_TYPE + " TEXT,"
-                + KEY_CONDITION + " TEXT)";
+                + KEY_CONDITION + " TEXT,"
+                + KEY_VIRUS + " REAL,"
+                + KEY_CONTAMINANT + " REAL)";
 
-        public static final String SOURCE_TABLE_DELETE_ENTRIES =
+        public static final String PURITY_TABLE_DELETE_ENTRIES =
                 "DROP TABLE IF EXISTS " + TABLE_NAME;
 
     }

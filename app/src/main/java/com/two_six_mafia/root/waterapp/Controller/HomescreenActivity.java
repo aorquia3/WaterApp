@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.two_six_mafia.root.waterapp.Model.Manager;
 import com.two_six_mafia.root.waterapp.Model.Model;
+import com.two_six_mafia.root.waterapp.Model.UserType;
 import com.two_six_mafia.root.waterapp.Model.Worker;
 import com.two_six_mafia.root.waterapp.R;
 
@@ -95,12 +96,12 @@ public class HomescreenActivity extends AppCompatActivity {
         viewPurityReports.setClickable(false);
         viewPurityReports.setEnabled(false);
 
-        if(model.getCurrentUser() instanceof Worker) {
+        if(model.getCurrentUser().getUserType().equals(UserType.WORKER)) {
             createPurityReport.setClickable(true);
             createPurityReport.setEnabled(true);
         }
 
-        if (model.getCurrentUser() instanceof Manager) {
+        if (model.getCurrentUser().getUserType().equals(UserType.MANAGER)) {
             createPurityReport.setClickable(true);
             createPurityReport.setEnabled(true);
             viewPurityReports.setClickable(true);

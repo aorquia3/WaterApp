@@ -10,8 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.two_six_mafia.root.waterapp.Model.Database;
 import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.OverallCondition;
 import com.two_six_mafia.root.waterapp.Model.PurityReport;
@@ -34,6 +36,8 @@ public class PurityReportActivity extends AppCompatActivity {
 
     private String date;
     private String time;
+
+    private Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +81,8 @@ public class PurityReportActivity extends AppCompatActivity {
         longitude.setText(DEFAULT_LON.toString());
         //virusPPM.setText(String.valueOf(0.0));
         //contaminantPPM.setText(String.valueOf(0.0));
+
+        database = new Database(this);
     }
 
     /**
@@ -110,7 +116,10 @@ public class PurityReportActivity extends AppCompatActivity {
             new LatLng(Double.parseDouble(latitude.getText().toString()), Double.parseDouble(
                     longitude.getText().toString())));
 
-        model.addToPurityReports(purityReport);
+    model.addToPurityReports(purityReport);
+    long row  = database.addPurityReport(purityReport);
+    Toast.makeText(this, "New purity report to database at row "
+            + row, Toast.LENGTH_LONG).show();
     cancel();
 }
 

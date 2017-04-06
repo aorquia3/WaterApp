@@ -56,12 +56,13 @@ public class WelcomeActivity extends AppCompatActivity {
         database = new Database(this);
         UserList userList = UserList.getInstance();
         List<Person> users = database.getUserList();
-        users.add(new Person("nats", "deez", "my name", "urface@gatech.com", UserType.USER));
+        users.add(new Person("natz", "deez", "my name", "urface@gatech.com", UserType.USER));
         for (Person person : users) {
             userList.addUser(person);
         }
 
         database.populateSources();
+        database.populatePurityReports();
 
     }
 
