@@ -1,30 +1,15 @@
 package com.two_six_mafia.root.waterapp.Model;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
- * Created by aaron on 2/23/17.
- */
-
-/**
- * Overarhing model class
+ * Overarching model class
  */
 public class Model {
-    private static Model ourInstance = new Model();
-    public static Model getInstance() {
-        return ourInstance;
-    }
-
-    private ArrayList<WaterSource> sourceList;
-    private ArrayList<SourceReport> reportList;
-    private ArrayList<PurityReport> purityReports;
-
-    //We want to track the user who is currently logged in.
-    private Person currentUser;
+    //Set up the singleton to contain data used by the entire app.
+    private static final Model ourInstance = new Model();
 
     /**
-     * Constructs the model
+     * Constructs our model.
      */
     private Model() {
         currentUser = null;
@@ -32,6 +17,22 @@ public class Model {
         reportList = new ArrayList<>();
         purityReports = new ArrayList<>();
     }
+
+    /**
+     * Allows us to access our instance of the model.
+     * @return Model
+     */
+    public static Model getInstance() {
+        return ourInstance;
+    }
+
+    //Store the list of sources,
+    private final ArrayList<WaterSource> sourceList;
+    private final ArrayList<SourceReport> reportList;
+    private final ArrayList<PurityReport> purityReports;
+
+    //Store the user who is currently logged in to determine access levels.
+    private Person currentUser;
 
     /**
      * sets up the current user

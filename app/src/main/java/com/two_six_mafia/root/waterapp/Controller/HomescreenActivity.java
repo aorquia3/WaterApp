@@ -82,6 +82,7 @@ public class HomescreenActivity extends AppCompatActivity {
 
         Model model = Model.getInstance();
 
+        //Only lets certain user types access features.
         createPurityReport.setClickable(false);
         createPurityReport.setEnabled(false);
         viewPurityReports.setClickable(false);

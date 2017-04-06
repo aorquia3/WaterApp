@@ -26,7 +26,7 @@ public class PurityReport {
      * @param reporter name of the person who reports it
      * @param overallCondition the overall condition of the source
      * @param virusPPM virus parts per million
-     * @param contaminantPPM contaiminent per million
+     * @param contaminantPPM contaminant per million
      * @param location location of water source
      */
     public PurityReport(String date, String time, String reporter, OverallCondition overallCondition,
@@ -40,6 +40,8 @@ public class PurityReport {
         this.location = location;
         this.reportNumber = ++REPORT_COUNTER;
     }
+
+
 
     @Override
     public String toString() {

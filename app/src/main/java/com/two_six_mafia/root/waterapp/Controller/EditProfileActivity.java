@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -75,12 +76,16 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void save() {
         Model model = Model.getInstance();
         Person currentUser = model.getCurrentUser();
-        currentUser.setEmail(emailField.getText().toString());
-        currentUser.setName(nameField.getText().toString());
-        currentUser.setPassword(passwordField.getText().toString());
+        try {
+            currentUser.setEmail(emailField.getText().toString());
+            currentUser.setName(nameField.getText().toString());
+            currentUser.setPassword(passwordField.getText().toString());
 
-        Intent intent = new Intent(this, HomescreenActivity.class);
-        startActivity(intent);
+            Intent intent = new Intent(this, HomescreenActivity.class);
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+        }
     }
     /**
      * Sets the cancel button to go to the Welcome Page
