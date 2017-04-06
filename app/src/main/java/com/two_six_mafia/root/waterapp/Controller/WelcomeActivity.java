@@ -61,6 +61,8 @@ public class WelcomeActivity extends AppCompatActivity {
             userList.addUser(person);
         }
 
+        database.populateSources();
+
     }
 
     /**

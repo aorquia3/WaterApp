@@ -10,11 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.two_six_mafia.root.waterapp.Model.Database;
 import com.two_six_mafia.root.waterapp.Model.Model;
-import com.two_six_mafia.root.waterapp.Model.SourceReport;
 import com.two_six_mafia.root.waterapp.Model.WaterCondition;
 import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.Model.WaterType;
@@ -35,6 +36,8 @@ public class SourceReportActivity extends AppCompatActivity {
 
     private final Double DEFAULT_LAT = -34.0;
     private final Double DEFAULT_LON = 151.0;
+
+    private Database database;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -95,6 +98,7 @@ public class SourceReportActivity extends AppCompatActivity {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         waterCondition.setAdapter(adapter2);
 
+        database = new Database(this);
     }
 
     /**
@@ -103,14 +107,15 @@ public class SourceReportActivity extends AppCompatActivity {
     private void add() {
         Model model = Model.getInstance();
 
-        SourceReport sourceReport = new SourceReport(date.getText().toString(), time.getText().toString(),
+        WaterSource waterSource = new WaterSource(date.getText().toString(), time.getText().toString(),
                 model.getCurrentUser().getName(), (WaterType) waterType.getSelectedItem(),
-                (WaterCondition) waterCondition.getSelectedItem());
-        model.addToReports(sourceReport);
-
-        WaterSource waterSource = new WaterSource(sourceReport);
-        waterSource.setLocation(new LatLng(Double.parseDouble(latitude.getText().toString()),Double.parseDouble(longitude.getText().toString())));
+                (WaterCondition) waterCondition.getSelectedItem(),
+                Double.parseDouble(latitude.getText().toString()), Double.parseDouble(longitude.getText().toString()));
         model.addToSources(waterSource);
+
+        long row  = database.addSource(waterSource);
+        Toast.makeText(this, "New Source added to database at row "
+                + row, Toast.LENGTH_LONG).show();
         cancel();
     }
 

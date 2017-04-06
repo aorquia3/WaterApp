@@ -134,7 +134,7 @@ public class HomescreenActivity extends AppCompatActivity {
     }
 
     /**
-     * Takes the user to create a new source report on SourceReport
+     * Takes the user to create a new location report
      */
     private void sourceReport() {
         Intent intent = new Intent(this, SourceReportActivity.class);

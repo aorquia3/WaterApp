@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.two_six_mafia.root.waterapp.Model.Model;
-import com.two_six_mafia.root.waterapp.Model.SourceReport;
+import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
 import java.util.ArrayList;
@@ -24,10 +24,10 @@ public class ReportListActivity extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.reportList);
 
         Model model = Model.getInstance();
-        List<SourceReport> sourceReports = (ArrayList) model.getReportList();
+        List<WaterSource> waterReports = (ArrayList) model.getSourceList();
 
-        ArrayAdapter<SourceReport> arrayAdapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_list_item_1, sourceReports);
+        ArrayAdapter<WaterSource> arrayAdapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_list_item_1, waterReports);
         listview.setAdapter(arrayAdapter);
 
     }
