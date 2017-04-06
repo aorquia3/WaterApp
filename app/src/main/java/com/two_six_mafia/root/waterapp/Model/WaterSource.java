@@ -36,15 +36,14 @@ public class WaterSource {
 
     /**
      * Add a purity report to the water source.
-     * @param purityReport
+     * @param purityReport that will be used
      */
     public void addPurityReport(PurityReport purityReport) {
-        ;
     }
 
     /**
      * Set location as an int, needs to be changed upon map integration
-     * @param location
+     * @param location of the source
      */
     public void setLocation(LatLng location) {
         this.location = location;
@@ -64,7 +63,7 @@ public class WaterSource {
 
     /**
      * ToString for the water source (just a location)
-     * @return
+     * @return a string of the location and water source
      */
     public String toString() {
         return "Water Source at: " + location;

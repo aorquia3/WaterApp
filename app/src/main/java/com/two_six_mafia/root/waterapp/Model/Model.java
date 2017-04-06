@@ -36,7 +36,7 @@ public class Model {
 
     /**
      * sets up the current user
-     * @param person
+     * @param person type
      */
     public void setCurrentUser(Person person) {
         this.currentUser = person;
@@ -68,7 +68,7 @@ public class Model {
 
     /**
      * Adds a purity report to the list of reports
-     * @param purityReport
+     * @param purityReport that will be looked at
      */
     public void addToPurityReports(PurityReport purityReport) {
         purityReports.add(purityReport);
