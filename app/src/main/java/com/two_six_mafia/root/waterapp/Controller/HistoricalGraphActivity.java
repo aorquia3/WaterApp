@@ -9,12 +9,13 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.two_six_mafia.root.waterapp.R;
 
 public class HistoricalGraphActivity extends AppCompatActivity {
 
-    private LineGraphSeries<com.jjoe64.graphview.series.DataPoint> series;
+    private LineGraphSeries<DataPoint> series;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -35,7 +36,7 @@ public class HistoricalGraphActivity extends AppCompatActivity {
         for (int i = 0; i < 500; i++) {
             x = x + .1;
             y = 5 * x;
-            series.appendData(new com.jjoe64.graphview.series.DataPoint(x, y), true, 500);
+            series.appendData(new DataPoint(x, y), true, 500);
         }
         graph.addSeries(series);
     }
