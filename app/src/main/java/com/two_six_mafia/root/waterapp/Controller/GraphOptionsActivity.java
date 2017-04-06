@@ -12,6 +12,8 @@ import android.widget.Spinner;
 import com.two_six_mafia.root.waterapp.Model.GraphType;
 import com.two_six_mafia.root.waterapp.R;
 
+import java.io.Serializable;
+
 public class GraphOptionsActivity extends AppCompatActivity {
 
     private Spinner graphType;
@@ -40,6 +42,7 @@ public class GraphOptionsActivity extends AppCompatActivity {
 
     private void goGraph() {
         Intent intent = new Intent(this, HistoricalGraphActivity.class);
+        intent.putExtra("type", (Serializable) graphType.getSelectedItem());
         startActivity(intent);
     }
 }

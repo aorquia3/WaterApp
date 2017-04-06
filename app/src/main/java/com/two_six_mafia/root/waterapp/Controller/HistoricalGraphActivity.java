@@ -11,6 +11,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.two_six_mafia.root.waterapp.Model.GraphType;
 import com.two_six_mafia.root.waterapp.Model.PurityReport;
 import com.two_six_mafia.root.waterapp.R;
 
@@ -24,18 +25,27 @@ public class HistoricalGraphActivity extends AppCompatActivity {
      */
     private GoogleApiClient client;
 
-    static public class GraphViewData {
-        public final double valueX;
-        public final double valueY;
-        public final String valueDate;
+    private int dateToint() {
+        return 10;
+    }
 
-        public GraphViewData(double valueX, double valueY,String valueDate) {
-            super();
-            this.valueX = valueX;
-            this.valueY = valueY;
-            this.valueDate = valueDate;
+    GraphType graphType = (GraphType) getIntent().getSerializableExtra("type");
+
+    private void chooseGraph() {
+        if(graphType.equals(GraphType.VIRUS)) {
+            graphVirus();
+        } else {
+            graphContaminant();
         }
-}
+    }
+
+    private void graphVirus() {
+
+    }
+
+    private void graphContaminant() {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
