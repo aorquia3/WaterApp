@@ -79,7 +79,8 @@
         </activity>
         <activity android:name=".Controller.SourceViewActivity" />
         <activity android:name=".Controller.PurityReportActivity" />
-        <activity android:name=".Controller.PurityListActivity"></activity>
+        <activity android:name=".Controller.PurityListActivity" />
+        <activity android:name=".Controller.HistoricalGraphActivity"></activity>
     </application>
 
 </manifest>

@@ -18,4 +18,5 @@
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="title_activity_edit_profile">EditProfile</string>
     <string name="title_activity_water_availibility">Map</string>
+    <string name="title_activity_history_graph_view">HistoryGraphView</string>
 </resources>
