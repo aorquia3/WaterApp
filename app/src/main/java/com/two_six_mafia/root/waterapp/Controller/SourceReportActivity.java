@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.two_six_mafia.root.waterapp.Model.Database;
 import com.two_six_mafia.root.waterapp.Model.Model;

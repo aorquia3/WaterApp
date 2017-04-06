@@ -1,6 +1,5 @@
 package com.two_six_mafia.root.waterapp.Model;
 import java.util.ArrayList;
-import android.os.Bundle;
 
 /**
  * Overarching model class

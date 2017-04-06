@@ -1,7 +1,5 @@
 package com.two_six_mafia.root.waterapp.Controller;
 
-import android.content.ContentValues;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.content.Intent;

@@ -1,7 +1,5 @@
 package com.two_six_mafia.root.waterapp.Model;
 
-import android.provider.ContactsContract;
-
 import com.two_six_mafia.root.waterapp.Exceptions.EmailFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.NameFormatException;
 import com.two_six_mafia.root.waterapp.Exceptions.PasswordFormatException;

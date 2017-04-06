@@ -13,7 +13,6 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.two_six_mafia.root.waterapp.Model.GraphType;
 import com.two_six_mafia.root.waterapp.Model.Model;
-import com.two_six_mafia.root.waterapp.Model.PurityReport;
 import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
@@ -35,6 +34,9 @@ public class HistoricalGraphActivity extends AppCompatActivity {
     int source;
     WaterSource waterSource;
 
+    /**
+     * Chooses Graph Type
+     */
     private void chooseGraph() {
         if(graphType.equals(GraphType.VIRUS)) {
             graphVirus();
@@ -43,10 +45,16 @@ public class HistoricalGraphActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Graphs if Virus
+     */
     private void graphVirus() {
 
     }
 
+    /**
+     * Graph if Contaminant
+     */
     private void graphContaminant() {
 
     }

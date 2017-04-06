@@ -7,10 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import com.two_six_mafia.root.waterapp.Model.Manager;
 import com.two_six_mafia.root.waterapp.Model.Model;
 import com.two_six_mafia.root.waterapp.Model.UserType;
-import com.two_six_mafia.root.waterapp.Model.Worker;
 import com.two_six_mafia.root.waterapp.R;
 
 public class HomescreenActivity extends AppCompatActivity {

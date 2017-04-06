@@ -1,8 +1,5 @@
 package com.two_six_mafia.root.waterapp.Model;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-
 import java.util.HashMap;
 
 /**

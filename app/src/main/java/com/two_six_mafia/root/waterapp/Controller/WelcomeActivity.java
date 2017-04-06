@@ -14,11 +14,8 @@ import android.view.View.OnClickListener;
 
 import com.two_six_mafia.root.waterapp.Controller.LoginActivity;
 import com.two_six_mafia.root.waterapp.Controller.RegistrationActivity;
-import com.two_six_mafia.root.waterapp.Model.DBContract;
-import com.two_six_mafia.root.waterapp.Model.DBHelper;
 import com.two_six_mafia.root.waterapp.Model.Database;
 import com.two_six_mafia.root.waterapp.Model.Person;
-import com.two_six_mafia.root.waterapp.Model.User;
 import com.two_six_mafia.root.waterapp.Model.UserList;
 import com.two_six_mafia.root.waterapp.Model.UserType;
 

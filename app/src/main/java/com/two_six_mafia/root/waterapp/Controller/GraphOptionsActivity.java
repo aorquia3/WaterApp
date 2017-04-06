@@ -42,6 +42,9 @@ public class GraphOptionsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Goes to the graph
+     */
     private void goGraph() {
         int source =Integer.parseInt(sourceNumber.getText().toString());
         if ( source < 0 || source > WaterSource.SOURCE_COUNTER) {
