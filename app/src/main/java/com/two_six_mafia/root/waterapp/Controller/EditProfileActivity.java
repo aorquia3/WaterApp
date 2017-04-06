@@ -30,6 +30,7 @@ public class EditProfileActivity extends AppCompatActivity {
     private EditText nameField;
     private EditText passwordField;
     private EditText confirmPasswordField;
+    private Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 save();
             }
         });
+        database = new Database(this);
     }
 
     private void save() {
@@ -79,6 +81,7 @@ public class EditProfileActivity extends AppCompatActivity {
             currentUser.setName(nameField.getText().toString());
             currentUser.setPassword(passwordField.getText().toString());
 
+            database.updateUser();
             Intent intent = new Intent(this, HomescreenActivity.class);
             startActivity(intent);
         } catch(Exception e) {

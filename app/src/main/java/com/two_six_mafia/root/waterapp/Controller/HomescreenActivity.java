@@ -95,6 +95,8 @@ public class HomescreenActivity extends AppCompatActivity {
         createPurityReport.setEnabled(false);
         viewPurityReports.setClickable(false);
         viewPurityReports.setEnabled(false);
+        viewGraph.setEnabled(false);
+        viewGraph.setClickable(false);
 
         if(model.getCurrentUser().getUserType().equals(UserType.WORKER)) {
             createPurityReport.setClickable(true);
@@ -106,12 +108,14 @@ public class HomescreenActivity extends AppCompatActivity {
             createPurityReport.setEnabled(true);
             viewPurityReports.setClickable(true);
             viewPurityReports.setEnabled(true);
+            viewGraph.setEnabled(true);
+            viewGraph.setClickable(true);
         }
 
     }
 
     private void viewGraph() {
-        Intent intent = new Intent(this, HistoricalGraphActivity.class);
+        Intent intent = new Intent(this, GraphOptionsActivity.class);
         startActivity(intent);
     }
 

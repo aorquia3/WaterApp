@@ -8,35 +8,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.two_six_mafia.root.waterapp.Controller.HistoricalData">
+    tools:context="com.two_six_mafia.root.waterapp.Controller.GraphOptionsActivity">
 
     <Spinner
+        android:id="@+id/graphType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="291dp"
-        android:id="@+id/virusCont"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="7dp" />
+        android:layout_alignTop="@+id/textViewHD2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
 
     <TextView
-        android:layout_width="wrap_contentTextView"
+        android:id="@+id/textViewHD"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="66dp"
-        android:id="@+id/textViewHD"
         android:text="Graph Display Options" />
 
     <TextView
-        android:text="Virus or Contaminent?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
         android:id="@+id/textViewHD2"
-        android:layout_alignBottom="@+id/virusCont"
-        android:layout_toStartOf="@+id/sourceNumber"
-        android:layout_marginEnd="27dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Virus or Contaminent?"
+        android:layout_below="@+id/textViewHD"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -52,19 +50,18 @@
         android:text="Source Number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="16dp"
         android:id="@+id/textViewHD3"
+        tools:text="Source Number"
         android:layout_above="@+id/sourceNumber"
-        android:layout_alignStart="@+id/textViewHD2"
-        android:layout_marginStart="7dp"
-        tools:text="Source Number" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Graph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/GoToGraph"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textViewHD"
-        android:layout_marginBottom="37dp"
-        android:id="@+id/GoToGraph" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp" />
 </RelativeLayout>

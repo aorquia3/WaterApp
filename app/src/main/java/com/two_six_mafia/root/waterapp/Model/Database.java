@@ -73,6 +73,10 @@ public class Database {
         return database.insert(DBContract.Purity.TABLE_NAME, null, values);
     }
 
+    public void updateUser() {
+
+    }
+
     public List<Person> getUserList() {
         List<Person> users = new ArrayList<Person>();
         String selectQuery = "SELECT * FROM " + DBContract.Users.TABLE_NAME;
@@ -233,4 +237,5 @@ public class Database {
         }
         cursor.close();
     }
+
 }

@@ -12,9 +12,9 @@ import android.widget.Spinner;
 import com.two_six_mafia.root.waterapp.Model.GraphType;
 import com.two_six_mafia.root.waterapp.R;
 
-public class HistoricalData extends AppCompatActivity {
+public class GraphOptionsActivity extends AppCompatActivity {
 
-    private Spinner virusCont;
+    private Spinner graphType;
     private EditText sourceNumber;
 
     @Override
@@ -22,12 +22,12 @@ public class HistoricalData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historical_data);
 
-        virusCont = (Spinner) findViewById(R.id.userType);
+        graphType = (Spinner) findViewById(R.id.graphType);
         sourceNumber = (EditText) findViewById(R.id.sourceNumber);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, GraphType.values());
+        ArrayAdapter<GraphType> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, GraphType.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        virusCont.setAdapter(adapter);
+        graphType.setAdapter(adapter);
 
         Button graph = (Button) findViewById(R.id.GoToGraph);
         graph.setOnClickListener(new View.OnClickListener() {

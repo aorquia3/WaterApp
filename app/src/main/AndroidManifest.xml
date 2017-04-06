@@ -81,7 +81,7 @@
         <activity android:name=".Controller.PurityReportActivity" />
         <activity android:name=".Controller.PurityListActivity" />
         <activity android:name=".Controller.HistoricalGraphActivity" />
-        <activity android:name=".Controller.HistoricalData"></activity>
+        <activity android:name=".Controller.GraphOptionsActivity"></activity>
     </application>
 
 </manifest>
