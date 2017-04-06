@@ -16,6 +16,7 @@ import com.two_six_mafia.root.waterapp.R;
 public class HistoricalGraphActivity extends AppCompatActivity {
 
     private LineGraphSeries<DataPoint> series;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -25,6 +26,7 @@ public class HistoricalGraphActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historical_graph);
 
