@@ -2,6 +2,7 @@ package com.two_six_mafia.root.waterapp.Model;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.io.Serializable;
 
 
 /**
@@ -9,30 +10,41 @@ import com.google.android.gms.maps.model.LatLng;
  * Represents a location on the map which can contain multiple reports.
  */
 
-public class WaterSource {
-    //Location currently stored as an int representing LATLONG, this is likely to change in the future.
-    private LatLng location;
-    //Sorting reports in a stack should naturally order them with time.
-    private final SourceReport sourceReport;
-    private static int SOURCE_COUNTER;
+public class WaterSource implements Serializable {
+    //Location currently stored as an int representing LATLONG
+    private double lat;
+    private double lon;
     private final int sourceNumber;
 
-    /**
-     * Default constructor
-     * @param sourceReport first sourceReport for a given WaterSource
-     */
-    public WaterSource(SourceReport sourceReport) {
-        this.sourceReport = sourceReport;
-        sourceNumber = ++SOURCE_COUNTER;
-    }
+    private static int SOURCE_COUNTER;
+
+    private final String date;
+    private final String time;
+    private final String reporter;
+    private final WaterType waterType;
+    private final WaterCondition waterCondition;
 
     /**
-     * Return the water source's list of reports
-     * @return Stack of sourceReports
+     *
+     * @param date
+     * @param time
+     * @param reporter
+     * @param waterType
+     * @param waterCondition
+     * @param lat
+     * @param lon
      */
-    public SourceReport getSourceReport() {
-        return sourceReport;
+    public WaterSource(String date, String time, String reporter, WaterType waterType, WaterCondition waterCondition, double lat, double lon) {
+        this.date = date;
+        this.time = time;
+        this.reporter = reporter;
+        this.waterType = waterType;
+        this.waterCondition = waterCondition;
+        this.lat = lat;
+        this.lon = lon;
+        this.sourceNumber = ++SOURCE_COUNTER;
     }
+
 
     /**
      * Add a purity report to the water source.
@@ -42,11 +54,12 @@ public class WaterSource {
     }
 
     /**
-     * Set location as an int, needs to be changed upon map integration
+     * Set location as a lat/long
      * @param location of the source
      */
     public void setLocation(LatLng location) {
-        this.location = location;
+        this.lat = location.latitude;
+        this.lon = location.longitude;
     }
 
     /**
@@ -54,7 +67,27 @@ public class WaterSource {
      * @return int location
      */
     public LatLng getLocation() {
-        return location;
+        return new LatLng(lat,lon);
+    }
+
+    public WaterType getWaterType() {
+        return waterType;
+    }
+
+    public WaterCondition getWaterCondition() {
+        return waterCondition;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getReporter() {
+        return reporter;
     }
 
     public int getSourceNumber() {
@@ -66,6 +99,6 @@ public class WaterSource {
      * @return a string of the location and water source
      */
     public String toString() {
-        return "Water Source at: " + location;
+        return "Water Source: " + sourceNumber + " Submitted on: " + date + " " + time + " By: " + reporter +" At: " + getLocation();
     }
 }

@@ -10,6 +10,8 @@ public class PurityReport {
 
     private static int REPORT_COUNTER;
 
+    private double lat;
+    private double lon;
     private final int reportNumber;
     private final String date;
     private final String time;
@@ -17,7 +19,7 @@ public class PurityReport {
     private final OverallCondition overallCondition;
     private final double virusPPM;
     private final double contaminantPPM;
-    private final LatLng location;
+
 
     /**
      * Creates the purity report
@@ -37,15 +39,46 @@ public class PurityReport {
         this.overallCondition =overallCondition;
         this.virusPPM = virusPPM;
         this.contaminantPPM = contaminantPPM;
-        this.location = location;
+        this.lat = location.latitude;
+        this.lon = location.longitude;
         this.reportNumber = ++REPORT_COUNTER;
     }
 
+    public LatLng getLocation() {
+        return new LatLng(lat,lon);
+    }
 
+    public double getVirusPPM() {
+        return virusPPM;
+    }
+
+    public double getContaminantPPM() {
+        return contaminantPPM;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public int getReportNumber() {
+        return reportNumber;
+    }
 
     @Override
     public String toString() {
         return "Purity Report " + reportNumber + " Submitted by: " + reporter + " on " + date + " at "
                 + time + ". Virus PPM: " + virusPPM + " Contaminant PPM: " + contaminantPPM + ".";
+    }
+
+    public String getReporter() {
+        return reporter;
+    }
+
+    public OverallCondition getOverallCondition() {
+        return overallCondition;
     }
 }

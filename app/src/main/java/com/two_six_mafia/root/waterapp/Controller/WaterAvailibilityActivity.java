@@ -12,7 +12,6 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import com.two_six_mafia.root.waterapp.Model.Model;
-import com.two_six_mafia.root.waterapp.Model.SourceReport;
 import com.two_six_mafia.root.waterapp.Model.WaterSource;
 import com.two_six_mafia.root.waterapp.R;
 
@@ -20,7 +19,7 @@ public class WaterAvailibilityActivity extends FragmentActivity implements Googl
 
     private GoogleMap mMap;
     private Marker marker;
-    private SourceReport sourceReport;
+    private WaterSource waterSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +50,9 @@ public class WaterAvailibilityActivity extends FragmentActivity implements Googl
         for (WaterSource source : model.getSourceList()) {
             marker = mMap.addMarker(new MarkerOptions().position(source.getLocation())
                     .title("Source " + source.getSourceNumber())
-                    .snippet("Water Type: " + source.getSourceReport().getWaterType()
-                            + ", Latest Water Condition: " + source.getSourceReport().getWaterCondition()));
-            marker.setTag(source.getSourceReport());
+                    .snippet("Water Type: " + source.getWaterType()
+                            + ", Latest Water Condition: " + source.getWaterCondition()));
+            marker.setTag(source);
             mMap.moveCamera(CameraUpdateFactory.newLatLng(source.getLocation()));
         }
     }
@@ -61,8 +60,8 @@ public class WaterAvailibilityActivity extends FragmentActivity implements Googl
     @Override
     public void onInfoWindowClick(Marker marker) {
         Intent intent = new Intent(this, SourceViewActivity.class);
-        sourceReport = (SourceReport) marker.getTag();
-        intent.putExtra("SourceReport", sourceReport);
+        waterSource = (WaterSource) marker.getTag();
+        intent.putExtra("WaterSource", waterSource);
         startActivity(intent);
     }
 }

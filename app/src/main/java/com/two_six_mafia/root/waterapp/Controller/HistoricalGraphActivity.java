@@ -56,6 +56,7 @@ public class HistoricalGraphActivity extends AppCompatActivity {
             series.appendData(new DataPoint(x, y), true, 500);
         }
         graph.addSeries(series);
+
     }
 
     /**
