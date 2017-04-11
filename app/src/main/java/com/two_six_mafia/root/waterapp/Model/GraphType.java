@@ -1,8 +1,5 @@
 package com.two_six_mafia.root.waterapp.Model;
 
-/**
- * Created by rjara on 4/6/2017.
- */
 
 import java.io.Serializable;
 

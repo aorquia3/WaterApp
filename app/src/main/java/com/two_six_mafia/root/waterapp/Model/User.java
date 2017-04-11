@@ -6,3 +6,4 @@ package com.two_six_mafia.root.waterapp.Model;
 
 public class User extends Person {
 }
+
