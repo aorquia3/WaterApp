@@ -113,6 +113,14 @@ public class Person {
             throw new PasswordFormatException( "Password must be at least 4 characters.");
         } else if (password.equalsIgnoreCase(username)) {
             throw new PasswordFormatException("Don't use your username as your password.");
+        } else if (!password.contains("0") && !password.contains("2") && !password.contains("3")
+                && !password.contains("4") && !password.contains("5") && !password.contains("6")
+                && !password.contains("7") && !password.contains("8") && !password.contains("9")
+                && !password.contains("1")) {
+            throw new PasswordFormatException("Password must contain a number.");
+        } else if (!password.contains("!") && !password.contains("@") && !password.contains("$")
+                &&!password.contains("%") && !password.contains("&") && !password.contains("*")) {
+            throw new PasswordFormatException("Password must conatin one of: !@#$%&*");
         }
         this.password = password;
     }
@@ -122,7 +130,7 @@ public class Person {
      * @param email the new email address
      */
     public void setEmail(String email) throws EmailFormatException {
-        if (!email.contains("@") || !email.contains(".com")) {
+        if (!email.contains("@") || !email.contains(".com") && !email.contains(".edu")) {
             throw new EmailFormatException("Not a valid email address.");
         }
 
