@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2ACAD30A2AAEF498DF7B46C28CCF8345"
-               BuildableName = "libPods-ThirstQuencher.a"
-               BlueprintName = "Pods-ThirstQuencher"
+               BuildableName = "libPods-Drop.a"
+               BlueprintName = "Pods-Drop"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2ACAD30A2AAEF498DF7B46C28CCF8345"
-            BuildableName = "libPods-ThirstQuencher.a"
-            BlueprintName = "Pods-ThirstQuencher"
+            BuildableName = "libPods-Drop.a"
+            BlueprintName = "Pods-Drop"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2ACAD30A2AAEF498DF7B46C28CCF8345"
-            BuildableName = "libPods-ThirstQuencher.a"
-            BlueprintName = "Pods-ThirstQuencher"
+            BuildableName = "libPods-Drop.a"
+            BlueprintName = "Pods-Drop"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

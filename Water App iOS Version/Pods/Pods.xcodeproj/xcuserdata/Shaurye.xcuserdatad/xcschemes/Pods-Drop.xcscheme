@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = 'primary'
                BlueprintIdentifier = '2ACAD30A2AAEF498DF7B46C28CCF8345'
-               BlueprintName = 'Pods-ThirstQuencher'
+               BlueprintName = 'Pods-Drop'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-ThirstQuencher.a'>
+               BuildableName = 'libPods-Drop.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
