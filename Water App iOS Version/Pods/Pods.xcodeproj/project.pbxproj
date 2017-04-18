@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D32D8C91C0C751D8B58500A27B493F0 /* Pods-ThirstQuencher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F07A04462070C9C69860F9ACBECA54C /* Pods-ThirstQuencher-dummy.m */; };
+		0D32D8C91C0C751D8B58500A27B493F0 /* Pods-Drop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F07A04462070C9C69860F9ACBECA54C /* Pods-Drop-dummy.m */; };
 		7678E315622D1C5FD546D874331868D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08F1229163C7F5E61C7C4B361510F11C /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		10D51437C05ECAF7BE26028BB01D0D87 /* Pods-ThirstQuencher-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ThirstQuencher-frameworks.sh"; sourceTree = "<group>"; };
+		10D51437C05ECAF7BE26028BB01D0D87 /* Pods-Drop-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ThirstQuencher-frameworks.sh"; sourceTree = "<group>"; };
 		16CD3A9F60ABF3B501991088331C1BCD /* libPods-ThirstQuencher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ThirstQuencher.a"; path = "libPods-ThirstQuencher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4938509E3723353B7C0F80C79000F3 /* Pods-ThirstQuencher-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ThirstQuencher-acknowledgements.markdown"; sourceTree = "<group>"; };
 		224A4386436D0D7436F14D4AC15F117D /* Pods-ThirstQuencher-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ThirstQuencher-acknowledgements.plist"; sourceTree = "<group>"; };
