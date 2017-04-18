@@ -13,15 +13,15 @@
 
 /* Begin PBXFileReference section */
 		08F1229163C7F5E61C7C4B361510F11C /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		10D51437C05ECAF7BE26028BB01D0D87 /* Pods-Drop-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ThirstQuencher-frameworks.sh"; sourceTree = "<group>"; };
-		16CD3A9F60ABF3B501991088331C1BCD /* libPods-ThirstQuencher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ThirstQuencher.a"; path = "libPods-ThirstQuencher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C4938509E3723353B7C0F80C79000F3 /* Pods-ThirstQuencher-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ThirstQuencher-acknowledgements.markdown"; sourceTree = "<group>"; };
-		224A4386436D0D7436F14D4AC15F117D /* Pods-ThirstQuencher-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ThirstQuencher-acknowledgements.plist"; sourceTree = "<group>"; };
-		30C0FFAB8AFC2880CF51A36F92C636E3 /* Pods-ThirstQuencher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ThirstQuencher.debug.xcconfig"; sourceTree = "<group>"; };
-		5F07A04462070C9C69860F9ACBECA54C /* Pods-ThirstQuencher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ThirstQuencher-dummy.m"; sourceTree = "<group>"; };
+		10D51437C05ECAF7BE26028BB01D0D87 /* Pods-Drop-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Drop-frameworks.sh"; sourceTree = "<group>"; };
+		16CD3A9F60ABF3B501991088331C1BCD /* libPods-Drop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Drop.a"; path = "libPods-Drop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C4938509E3723353B7C0F80C79000F3 /* Pods-Drop-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Drop-acknowledgements.markdown"; sourceTree = "<group>"; };
+		224A4386436D0D7436F14D4AC15F117D /* Pods-Drop-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Drop-acknowledgements.plist"; sourceTree = "<group>"; };
+		30C0FFAB8AFC2880CF51A36F92C636E3 /* Pods-Drop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Drop.debug.xcconfig"; sourceTree = "<group>"; };
+		5F07A04462070C9C69860F9ACBECA54C /* Pods-Drop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Drop-dummy.m"; sourceTree = "<group>"; };
 		70324FDF1FBB41BEA92DE76E00BD3E96 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		85599A27C46A656F94F8A2574617DEEA /* Pods-ThirstQuencher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ThirstQuencher.release.xcconfig"; sourceTree = "<group>"; };
-		89397776A3FEE1CC57281E8CC7E03AFD /* Pods-ThirstQuencher-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ThirstQuencher-resources.sh"; sourceTree = "<group>"; };
+		85599A27C46A656F94F8A2574617DEEA /* Pods-Drop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Drop.release.xcconfig"; sourceTree = "<group>"; };
+		89397776A3FEE1CC57281E8CC7E03AFD /* Pods-Drop-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Drop-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A92DFDA40F47C0FD221B2872C31099A1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		AFD4D1E144CCB4285706E577C2602A44 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		21F3B2A5D3F12134E65D613F746220B3 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				495EC58302626F65C71F5E91C18F75E9 /* Pods-ThirstQuencher */,
+				495EC58302626F65C71F5E91C18F75E9 /* Pods-Drop */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 		31E97E09BC3EB3C535FE8CA7045D811F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16CD3A9F60ABF3B501991088331C1BCD /* libPods-ThirstQuencher.a */,
+				16CD3A9F60ABF3B501991088331C1BCD /* libPods-Drop.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,19 +104,19 @@
 			name = Maps;
 			sourceTree = "<group>";
 		};
-		495EC58302626F65C71F5E91C18F75E9 /* Pods-ThirstQuencher */ = {
+		495EC58302626F65C71F5E91C18F75E9 /* Pods-Drop */ = {
 			isa = PBXGroup;
 			children = (
-				1C4938509E3723353B7C0F80C79000F3 /* Pods-ThirstQuencher-acknowledgements.markdown */,
-				224A4386436D0D7436F14D4AC15F117D /* Pods-ThirstQuencher-acknowledgements.plist */,
-				5F07A04462070C9C69860F9ACBECA54C /* Pods-ThirstQuencher-dummy.m */,
-				10D51437C05ECAF7BE26028BB01D0D87 /* Pods-ThirstQuencher-frameworks.sh */,
-				89397776A3FEE1CC57281E8CC7E03AFD /* Pods-ThirstQuencher-resources.sh */,
-				30C0FFAB8AFC2880CF51A36F92C636E3 /* Pods-ThirstQuencher.debug.xcconfig */,
-				85599A27C46A656F94F8A2574617DEEA /* Pods-ThirstQuencher.release.xcconfig */,
+				1C4938509E3723353B7C0F80C79000F3 /* Pods-Drop-acknowledgements.markdown */,
+				224A4386436D0D7436F14D4AC15F117D /* Pods-Drop-acknowledgements.plist */,
+				5F07A04462070C9C69860F9ACBECA54C /* Pods-Drop-dummy.m */,
+				10D51437C05ECAF7BE26028BB01D0D87 /* Pods-Drop-frameworks.sh */,
+				89397776A3FEE1CC57281E8CC7E03AFD /* Pods-Drop-resources.sh */,
+				30C0FFAB8AFC2880CF51A36F92C636E3 /* Pods-Drop.debug.xcconfig */,
+				85599A27C46A656F94F8A2574617DEEA /* Pods-Drop.release.xcconfig */,
 			);
-			name = "Pods-ThirstQuencher";
-			path = "Target Support Files/Pods-ThirstQuencher";
+			name = "Pods-Drop";
+			path = "Target Support Files/Pods-Drop";
 			sourceTree = "<group>";
 		};
 		4CFA8C2E94378AFFDBA3DF92FBE7E3DC /* Frameworks */ = {
@@ -190,9 +190,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2ACAD30A2AAEF498DF7B46C28CCF8345 /* Pods-ThirstQuencher */ = {
+		2ACAD30A2AAEF498DF7B46C28CCF8345 /* Pods-Drop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20F473E125BF60FEC634C61C15A8D7F4 /* Build configuration list for PBXNativeTarget "Pods-ThirstQuencher" */;
+			buildConfigurationList = 20F473E125BF60FEC634C61C15A8D7F4 /* Build configuration list for PBXNativeTarget "Pods-Drop" */;
 			buildPhases = (
 				E9D5D2E1A5664A80B72CA3B159395079 /* Sources */,
 				123715D6A23675CA0ED0C6B048887075 /* Frameworks */,
@@ -201,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = "Pods-ThirstQuencher";
-			productName = "Pods-ThirstQuencher";
-			productReference = 16CD3A9F60ABF3B501991088331C1BCD /* libPods-ThirstQuencher.a */;
+			name = "Pods-Drop";
+			productName = "Pods-Drop";
+			productReference = 16CD3A9F60ABF3B501991088331C1BCD /* libPods-Drop.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2ACAD30A2AAEF498DF7B46C28CCF8345 /* Pods-ThirstQuencher */,
+				2ACAD30A2AAEF498DF7B46C28CCF8345 /* Pods-Drop */,
 			);
 		};
 /* End PBXProject section */
@@ -237,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D32D8C91C0C751D8B58500A27B493F0 /* Pods-ThirstQuencher-dummy.m in Sources */,
+				0D32D8C91C0C751D8B58500A27B493F0 /* Pods-Drop-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +246,7 @@
 /* Begin XCBuildConfiguration section */
 		3D670A601CD9C27D447DA485790AF070 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85599A27C46A656F94F8A2574617DEEA /* Pods-ThirstQuencher.release.xcconfig */;
+			baseConfigurationReference = 85599A27C46A656F94F8A2574617DEEA /* Pods-Drop.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -309,7 +309,7 @@
 		};
 		DD9E769EE05164D90FAD5D1133C67452 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30C0FFAB8AFC2880CF51A36F92C636E3 /* Pods-ThirstQuencher.debug.xcconfig */;
+			baseConfigurationReference = 30C0FFAB8AFC2880CF51A36F92C636E3 /* Pods-Drop.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -377,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20F473E125BF60FEC634C61C15A8D7F4 /* Build configuration list for PBXNativeTarget "Pods-ThirstQuencher" */ = {
+		20F473E125BF60FEC634C61C15A8D7F4 /* Build configuration list for PBXNativeTarget "Pods-Drop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD9E769EE05164D90FAD5D1133C67452 /* Debug */,
