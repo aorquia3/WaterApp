@@ -79,7 +79,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3k7-pp-0uE">
                                 <rect key="frame" x="73" y="178" width="229" height="48"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Thirst Quencher">
+                                    <fragment content="    Drop   ">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="31" name="Papyrus"/>
@@ -111,7 +111,7 @@
         <!--Sign In-->
         <scene sceneID="j41-8V-ab6">
             <objects>
-                <viewController title="Sign In" id="uLg-df-tlB" customClass="SignInViewController" customModule="ThirstQuencher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign In" id="uLg-df-tlB" customClass="SignInViewController" customModule="Drop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q6F-E8-vus"/>
                         <viewControllerLayoutGuide type="bottom" id="bUH-QR-mRl"/>
@@ -184,7 +184,7 @@
         <!--Main Screen-->
         <scene sceneID="dSu-Uo-eCR">
             <objects>
-                <viewController title="Main Screen" id="7I8-Jj-k3r" customClass="LoggedInViewController" customModule="ThirstQuencher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main Screen" id="7I8-Jj-k3r" customClass="LoggedInViewController" customModule="Drop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="As1-b7-FTU"/>
                         <viewControllerLayoutGuide type="bottom" id="0H3-vt-6jo"/>
@@ -250,7 +250,7 @@
         <!--Water Availability View Controller-->
         <scene sceneID="Ibb-pd-UVO">
             <objects>
-                <viewController id="MjH-Zb-ZLR" customClass="WaterAvailabilityViewController" customModule="ThirstQuencher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MjH-Zb-ZLR" customClass="WaterAvailabilityViewController" customModule="Drop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BG1-iY-ngX"/>
                         <viewControllerLayoutGuide type="bottom" id="ppZ-RC-6se"/>
@@ -268,7 +268,7 @@
         <!--New Source Report-->
         <scene sceneID="IlY-PX-igd">
             <objects>
-                <tableViewController title="New Source Report" id="vkA-8Y-GFB" customClass="SourceReportTableViewController" customModule="ThirstQuencher" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="New Source Report" id="vkA-8Y-GFB" customClass="SourceReportTableViewController" customModule="Drop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="rXj-0n-lnq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -534,7 +534,7 @@
         <!--Register-->
         <scene sceneID="b0w-dX-4IW">
             <objects>
-                <viewController title="Register" id="XcR-ww-1HZ" customClass="RegistrationViewController" customModule="ThirstQuencher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="XcR-ww-1HZ" customClass="RegistrationViewController" customModule="Drop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pqs-R6-kuU"/>
                         <viewControllerLayoutGuide type="bottom" id="GDu-CM-sJa"/>
