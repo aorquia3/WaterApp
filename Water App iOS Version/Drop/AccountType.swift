@@ -1,6 +1,6 @@
 //
 //  AccountType.swift
-//  ThirstQuencher
+//  Drop
 //
 //  Created by Claire
 //

@@ -1,6 +1,6 @@
 //
 //  Model.swift
-//  ThirstQuencher
+//  Drop
 //
 //  Created by Claire
 //

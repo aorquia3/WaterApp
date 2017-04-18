@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ThirstQuencher
+//  Drop
 //
 //  Created by Claire
 //
