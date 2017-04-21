@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditProfileActivity">
+   <children>
+      <Label layoutX="238.0" layoutY="29.0" text="Edit Profile">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="updateButton" layoutX="369.0" layoutY="262.0" mnemonicParsing="false" onAction="#update" text="Update" />
+      <Button fx:id="cancelButton" layoutX="370.0" layoutY="222.0" mnemonicParsing="false" text="Cancel" />
+      <Label layoutX="54.0" layoutY="63.0" text="Name" />
+      <TextField fx:id="nameTextField" layoutX="54.0" layoutY="84.0" />
+      <Label layoutX="54.0" layoutY="124.0" text="Email" />
+      <Label layoutX="54.0" layoutY="181.0" text="Username" />
+      <TextField fx:id="emailTextField" layoutX="54.0" layoutY="143.0" />
+      <TextField fx:id="usernameTextField" layoutX="54.0" layoutY="200.0" />
+      <Label layoutX="54.0" layoutY="239.0" text="Password" />
+      <PasswordField fx:id="password1" layoutX="54.0" layoutY="262.0" />
+      <Label layoutX="55.0" layoutY="302.0" text="Re-enter Password" />
+      <PasswordField fx:id="password2" layoutX="54.0" layoutY="322.0" />
+   </children>
+</Pane>

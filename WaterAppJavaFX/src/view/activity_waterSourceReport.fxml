@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WaterSourceReportActivity">
+   <children>
+      <Label layoutX="138.0" layoutY="19.0" text="Submit Water Source Report">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="waterType" layoutX="26.0" layoutY="91.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Bottled" />
+               <String fx:value="Well" />
+               <String fx:value="Stream" />
+               <String fx:value="Lake" />
+                <String fx:value="Spring" />
+                <String fx:value="Other" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Label layoutX="30.0" layoutY="63.0" text="Water Type" />
+      <Label layoutX="31.0" layoutY="134.0" text="Water Condition" />
+      <ComboBox fx:id="waterCondition" layoutX="26.0" layoutY="162.0" prefWidth="150.0">
+           <items>
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="Waste" />
+                   <String fx:value="Treatable Clear" />
+                   <String fx:value="Treatable Muddy" />
+                   <String fx:value="Portable" />
+               </FXCollections>
+           </items>
+      </ComboBox>
+      <TextField fx:id="lon" layoutX="111.0" layoutY="243.0" prefHeight="27.0" prefWidth="80.0" />
+      <TextField fx:id="lat" layoutX="26.0" layoutY="243.0" prefHeight="27.0" prefWidth="80.0" />
+      <Label layoutX="30.0" layoutY="216.0" text="Latitude" />
+      <Label layoutX="111.0" layoutY="216.0" text="Longitude" />
+      <Button layoutX="389.0" layoutY="151.0" mnemonicParsing="false" onAction="#addReport" text="Add Report" />
+      <Button fx:id="cancel" layoutX="402.0" layoutY="189.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</Pane>
