@@ -5,4 +5,5 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.two_six_mafia.root.waterapp.Controller.WaterAvailibilityActivity" />
+    tools:context="com.two_six_mafia.root.waterapp.Controller.WaterAvailabilityActivity"
+    tools:showIn="@layout/activity_water_availability" />

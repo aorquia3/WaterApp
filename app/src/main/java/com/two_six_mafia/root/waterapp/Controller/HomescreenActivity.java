@@ -172,7 +172,7 @@ public class HomescreenActivity extends AppCompatActivity {
      * Views the map
      */
     private void viewMap() {
-        Intent intent = new Intent(this, WaterAvailibilityActivity.class);
+        Intent intent = new Intent(this, WaterAvailabilityActivity.class);
         startActivity(intent);
     }
 

@@ -17,27 +17,21 @@
         android:text="Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:id="@+id/addPurityReport"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/confirmpassword"
         android:layout_alignParentStart="true"
-        android:id="@+id/addPurityReport" />
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/addPurityReport"
-        android:layout_alignRight="@+id/confirmpassword"
-        android:layout_alignEnd="@+id/confirmpassword"
-        android:id="@+id/Cancel_Registration" />
-
-    <TextView
-        android:text="Registration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/Cancel_Registration"
+        android:layout_below="@+id/addPurityReport"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"

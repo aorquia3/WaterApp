@@ -32,8 +32,9 @@
         </activity>
         <activity
             android:name=".Controller.LoginActivity"
-            android:label="@string/app_name"
-            android:parentActivityName=".Controller.WelcomeActivity" />
+            android:label=""
+            android:parentActivityName=".Controller.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Controller.RegistrationActivity"
             android:label="@string/title_activity_registraion"
@@ -55,9 +56,18 @@
         <activity
             android:name=".Controller.EditProfileActivity"
             android:label="@string/title_activity_edit_profile"
+            android:parentActivityName=".Controller.HomescreenActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Controller.SourceReportActivity" />
-        <activity android:name=".Controller.ReportListActivity" />
+        <activity
+            android:name=".Controller.SourceReportActivity"
+            android:label=""
+            android:parentActivityName=".Controller.HomescreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.ReportListActivity"
+            android:label=""
+            android:parentActivityName=".Controller.HomescreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -71,7 +81,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Controller.WaterAvailibilityActivity"
+            android:name=".Controller.WaterAvailabilityActivity"
             android:label="@string/title_activity_water_availibility">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
