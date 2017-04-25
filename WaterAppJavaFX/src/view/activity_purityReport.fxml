@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WaterPurityReportActivity">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WaterPurityReportActivity">
    <children>
-      <Label layoutX="145.0" layoutY="26.0" text="Submit Water Purity Report">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="title" width="600.0" />
+      <Label layoutX="197.0" layoutY="14.0" text="submit purity report" textAlignment="CENTER" textFill="#eceff1">
          <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="37.0" layoutY="82.0" text="Virus (in PPM)" />
-      <TextField fx:id="virus" layoutX="37.0" layoutY="108.0" />
-      <Label layoutX="37.0" layoutY="154.0" text="Contaminant (in PPM)" />
-      <TextField fx:id="contaminant" layoutX="37.0" layoutY="182.0" />
-      <ComboBox fx:id="condition" layoutX="37.0" layoutY="245.0" prefWidth="150.0">
+            <Font name="SansSerif Regular" size="24.0" />
+         </font></Label>
+      <Label layoutX="226.0" layoutY="72.0" text="Virus (in PPM)" />
+      <TextField fx:id="virus" layoutX="226.0" layoutY="94.0" />
+      <Label layoutX="226.0" layoutY="132.0" text="Contaminant (in PPM)" />
+      <TextField fx:id="contaminant" layoutX="226.0" layoutY="152.0" />
+      <ComboBox fx:id="condition" layoutX="225.0" layoutY="208.0" prefWidth="150.0">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="Safe" />
@@ -29,12 +30,12 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <Label layoutX="37.0" layoutY="220.0" text="Overall Condition" />
-      <Label layoutX="40.0" layoutY="284.0" text="Latitude" />
-      <Label layoutX="125.0" layoutY="284.0" text="Longitude" />
-      <TextField fx:id="lat" layoutX="37.0" layoutY="304.0" prefHeight="27.0" prefWidth="80.0" />
-      <TextField fx:id="lon" layoutX="125.0" layoutY="304.0" prefHeight="27.0" prefWidth="80.0" />
-      <Button fx:id="add" layoutX="397.0" layoutY="149.0" mnemonicParsing="false" onAction="#add" text="Add Report" />
-      <Button fx:id="cancel" layoutX="410.0" layoutY="187.0" mnemonicParsing="false" text="Cancel" />
+      <Label layoutX="226.0" layoutY="188.0" text="Overall Condition" />
+      <Label layoutX="231.0" layoutY="246.0" text="Latitude" />
+      <Label layoutX="320.0" layoutY="246.0" text="Longitude" />
+      <TextField fx:id="lat" layoutX="212.0" layoutY="265.0" prefHeight="27.0" prefWidth="80.0" />
+      <TextField fx:id="lon" layoutX="307.0" layoutY="265.0" prefHeight="27.0" prefWidth="80.0" />
+      <Button fx:id="add" layoutX="200.0" layoutY="305.0" mnemonicParsing="false" onAction="#add" text="Add Report" />
+      <Button fx:id="cancel" layoutX="200.0" layoutY="344.0" mnemonicParsing="false" text="Cancel" />
    </children>
 </Pane>

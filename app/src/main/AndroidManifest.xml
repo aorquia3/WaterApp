@@ -88,10 +88,22 @@
                 android:value="com.two_six_mafia.root.waterapp.Controller.HomescreenActivity" />
         </activity>
         <activity android:name=".Controller.SourceViewActivity" />
-        <activity android:name=".Controller.PurityReportActivity" />
-        <activity android:name=".Controller.PurityListActivity" />
-        <activity android:name=".Controller.HistoricalGraphActivity" />
-        <activity android:name=".Controller.GraphOptionsActivity"></activity>
+        <activity android:name=".Controller.PurityReportActivity"
+            android:label=""
+            android:parentActivityName=".Controller.HomescreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Controller.PurityListActivity"
+            android:label=""
+            android:parentActivityName=".Controller.HomescreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Controller.HistoricalGraphActivity"
+            android:label=""
+            android:parentActivityName=".Controller.HomescreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Controller.GraphOptionsActivity"
+            android:label=""
+            android:parentActivityName=".Controller.HomescreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

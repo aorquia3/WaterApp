@@ -57,6 +57,7 @@ public class MainAppLauncher extends Application {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(welcomeScreen);
+            scene.getStylesheets().add("style/styles.css");
             mainScreen.setScene(scene);
             mainScreen.show();
 

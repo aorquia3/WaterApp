@@ -7,16 +7,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WaterSourceReportActivity">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WaterSourceReportActivity">
    <children>
-      <Label layoutX="138.0" layoutY="19.0" text="Submit Water Source Report">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="waterType" layoutX="26.0" layoutY="91.0" prefWidth="150.0">
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="title" width="600.0" />
+       <Label layoutX="225.0" layoutY="14.0" text="submit source" textAlignment="CENTER" textFill="#eceff1">
+           <font>
+               <Font name="SansSerif Regular" size="24.0" />
+           </font></Label>
+      <ComboBox fx:id="waterType" layoutX="225.0" layoutY="93.0" prefWidth="150.0">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="Bottled" />
@@ -28,9 +29,9 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <Label layoutX="30.0" layoutY="63.0" text="Water Type" />
-      <Label layoutX="31.0" layoutY="134.0" text="Water Condition" />
-      <ComboBox fx:id="waterCondition" layoutX="26.0" layoutY="162.0" prefWidth="150.0">
+      <Label layoutX="227.0" layoutY="73.0" text="Water Type" />
+      <Label layoutX="227.0" layoutY="134.0" text="Water Condition" />
+      <ComboBox fx:id="waterCondition" layoutX="225.0" layoutY="153.0" prefWidth="150.0">
            <items>
                <FXCollections fx:factory="observableArrayList">
                    <String fx:value="Waste" />
@@ -40,11 +41,11 @@
                </FXCollections>
            </items>
       </ComboBox>
-      <TextField fx:id="lon" layoutX="111.0" layoutY="243.0" prefHeight="27.0" prefWidth="80.0" />
-      <TextField fx:id="lat" layoutX="26.0" layoutY="243.0" prefHeight="27.0" prefWidth="80.0" />
-      <Label layoutX="30.0" layoutY="216.0" text="Latitude" />
-      <Label layoutX="111.0" layoutY="216.0" text="Longitude" />
-      <Button layoutX="389.0" layoutY="151.0" mnemonicParsing="false" onAction="#addReport" text="Add Report" />
-      <Button fx:id="cancel" layoutX="402.0" layoutY="189.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="lon" layoutX="304.0" layoutY="212.0" prefHeight="27.0" prefWidth="80.0" />
+      <TextField fx:id="lat" layoutX="215.0" layoutY="212.0" prefHeight="27.0" prefWidth="80.0" />
+      <Label layoutX="234.0" layoutY="193.0" text="Latitude" />
+      <Label layoutX="317.0" layoutY="193.0" text="Longitude" />
+      <Button layoutX="205.0" layoutY="270.0" mnemonicParsing="false" onAction="#addReport" text="Add Report" />
+      <Button fx:id="cancel" layoutX="205.0" layoutY="305.0" mnemonicParsing="false" text="Cancel" />
    </children>
 </Pane>
