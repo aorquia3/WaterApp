@@ -13,6 +13,7 @@ public class Person {
     private String email;
     private UserType userType;
     private int id;
+    private int loginAttempts;
     private static int USERNUMBER = 0;
 
     /**
@@ -20,6 +21,7 @@ public class Person {
      */
     public Person() {
         id = ++USERNUMBER;
+        loginAttempts = 0;
     }
 
     /**
@@ -102,6 +104,14 @@ public class Person {
         }
 
         this.username = username;
+    }
+
+    public int getLoginAttempts() {
+        return loginAttempts;
+    }
+
+    public void incrimentLoginAttempts() {
+        loginAttempts++;
     }
 
     /**

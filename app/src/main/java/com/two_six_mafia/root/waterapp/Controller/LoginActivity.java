@@ -141,6 +141,21 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             cancel = true;
         }
 
+        UserList users = UserList.getInstance();
+        if(users.isRegisteredUser(email)) {
+            if(users.getUser(email).getLoginAttempts() > 2) {
+                mPasswordView.setError("Too many incorrect login attempts. Please email an admin.");
+                focusView = mPasswordView;
+                cancel = true;
+            }
+        }
+
+        if(!users.isRegisteredUser(email)) {
+            mUsernameView.setError("This username does not exist in our system.");
+            focusView = mUsernameView;
+            cancel = true;
+        }
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
@@ -333,7 +348,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // TODO: register the new account here.*/
 
             UserList users = UserList.getInstance();
-            return users.isRegisteredUser(mUsername) && users.getUser(mUsername).checkPassword(mPassword);
+            if (users.isRegisteredUser(mUsername)) {
+                if(users.getUser(mUsername).checkPassword(mPassword)) {
+                    return true;
+                } else {
+                    users.getUser(mUsername).incrimentLoginAttempts();
+                    return false;
+                }
+            }
+            return false;
 
         }
 
