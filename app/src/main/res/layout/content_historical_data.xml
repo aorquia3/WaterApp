@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_historical_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.two_six_mafia.root.waterapp.Controller.GraphOptionsActivity"
+    tools:showIn="@layout/activity_historical_data">
+
+    <Spinner
+        android:id="@+id/graphType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewHD2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:id="@+id/textViewHD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:text="Graph Display Options" />
+
+    <TextView
+        android:id="@+id/textViewHD2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Virus or Contaminent?"
+        android:layout_below="@+id/textViewHD"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginBottom="151dp"
+        android:id="@+id/sourceNumber"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Source Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/textViewHD3"
+        tools:text="Source Number"
+        android:layout_above="@+id/sourceNumber"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/GoToGraph"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_below="@+id/graphType"
+        android:layout_alignStart="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_above="@+id/textViewHD3"
+        android:layout_alignStart="@+id/sourceNumber"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graphType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Start Date" />
+
+    <TextView
+        android:id="@+id/endDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date"
+        android:layout_above="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
+</RelativeLayout>

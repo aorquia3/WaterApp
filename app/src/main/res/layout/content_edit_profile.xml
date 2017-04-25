@@ -44,19 +44,21 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/updateName"
-        android:layout_marginStart="7dp"
         android:layout_marginBottom="61dp"
-        android:id="@+id/profileCancel" />
+        android:id="@+id/profileCancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textFieldPassword"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/profileCancel"
-        android:layout_alignEnd="@+id/verifyUpdatePassword"
-        android:id="@+id/profileSave" />
+        android:id="@+id/profileSave"
+        android:layout_above="@+id/profileCancel"
+        android:layout_alignStart="@+id/profileCancel"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"

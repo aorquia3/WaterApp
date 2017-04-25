@@ -45,6 +45,7 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registraion);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         userType = (Spinner) findViewById(R.id.userType);
         nameField = (EditText) findViewById(R.id.name);
@@ -56,8 +57,6 @@ public class RegistrationActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserType.values());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userType.setAdapter(adapter);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button cancel = (Button) findViewById(R.id.Cancel_Registration);
         cancel.setOnClickListener(new View.OnClickListener() {
