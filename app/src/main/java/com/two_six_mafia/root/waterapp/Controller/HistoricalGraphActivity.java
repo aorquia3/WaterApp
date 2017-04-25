@@ -3,6 +3,7 @@ package com.two_six_mafia.root.waterapp.Controller;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -63,7 +64,10 @@ public class HistoricalGraphActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historical_graph);
+        setContentView(R.layout.content_historical_graph);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         double x,y;
 

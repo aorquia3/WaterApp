@@ -8,28 +8,30 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationActivity">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationActivity">
    <children>
-      <Label layoutX="232.0" layoutY="14.0" text="Registration">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="title" width="600.0" />
+      <Label layoutX="241.0" layoutY="14.0" text="registration" textAlignment="CENTER" textFill="#eceff1">
          <font>
-            <Font size="24.0" />
+            <Font name="SansSerif Regular" size="24.0" />
          </font></Label>
-      <Label layoutX="41.0" layoutY="56.0" text="Name" />
-      <Label layoutX="42.0" layoutY="110.0" text="Email" />
-      <Label layoutX="40.0" layoutY="162.0" text="Username" />
-      <Label layoutX="41.0" layoutY="214.0" text="Password" />
-      <Label layoutX="41.0" layoutY="270.0" text="Re-enter Password" />
-      <PasswordField fx:id="passwordTextField1" layoutX="40.0" layoutY="236.0" />
-      <PasswordField fx:id="passwordTextField2" layoutX="40.0" layoutY="293.0" />
-      <TextField fx:id="nameTextField" layoutX="40.0" layoutY="77.0" />
-      <TextField fx:id="emailTextField" layoutX="40.0" layoutY="129.0" />
-      <TextField fx:id="usernameTextField" layoutX="40.0" layoutY="183.0" />
-      <Button fx:id="registerButton" layoutX="360.0" layoutY="197.0" mnemonicParsing="false" onAction="#register" text="Register" />
-      <Button fx:id="cancelButton" layoutX="364.0" layoutY="236.0" mnemonicParsing="false" text="Cancel" />
-      <Label layoutX="319.0" layoutY="56.0" text="User Type" />
-      <ComboBox fx:id="userTypeComboBox" layoutX="319.0" layoutY="77.0" prefWidth="150.0">
+      <Label layoutX="41.0" layoutY="73.0" text="Name" />
+      <Label layoutX="201.0" layoutY="73.0" text="Email" />
+      <Label layoutX="361.0" layoutY="73.0" text="Username" />
+      <Label layoutX="41.0" layoutY="126.0" text="Password" />
+      <Label layoutX="201.0" layoutY="126.0" text="Re-enter Password" />
+      <Label layoutX="361.0" layoutY="126.0" text="User Type" />
+      <PasswordField fx:id="passwordTextField1" layoutX="41.0" layoutY="147.0" />
+      <PasswordField fx:id="passwordTextField2" layoutX="201.0" layoutY="147.0" />
+      <TextField fx:id="nameTextField" layoutX="41.0" layoutY="94.0" />
+      <TextField fx:id="emailTextField" layoutX="201.0" layoutY="94.0" />
+      <TextField fx:id="usernameTextField" layoutX="361.0" layoutY="94.0" />
+      <Button fx:id="registerButton" layoutX="201.0" layoutY="230.0" mnemonicParsing="false" onAction="#register" text="register" />
+      <Button fx:id="cancelButton" layoutX="201.0" layoutY="269.0" mnemonicParsing="false" text="Cancel" />
+      <ComboBox fx:id="userTypeComboBox" layoutX="360.0" layoutY="147.0" prefWidth="150.0">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="User" />

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Water App</string>
+    <string name="app_name">Drop</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Username</string>
@@ -13,10 +13,13 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_registraion">RegistraionActivity</string>
-    <string name="title_activity_homescreen">HomescreenActivity</string>
-    <string name="title_activity_welcome">WelcomeActivity</string>
-    <string name="title_activity_edit_profile">EditProfile</string>
-    <string name="title_activity_water_availibility">Map</string>
-    <string name="title_activity_history_graph_view">HistoryGraphView</string>
+
+    <!-- Left blank to fix toolbar behavior -->
+    <string name="title_activity_registraion"></string>
+    <string name="title_activity_homescreen"></string>
+    <string name="title_activity_welcome"></string>
+    <string name="title_activity_edit_profile"></string>
+    <string name="title_activity_login"></string>
+    <string name="title_activity_water_availibility"></string>
+    <string name="title_activity_history_graph_view"></string>
 </resources>
