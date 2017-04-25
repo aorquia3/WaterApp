@@ -5,20 +5,21 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginActivity">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginActivity">
    <children>
-      <TextField fx:id="usernameTextField" layoutX="27.0" layoutY="110.0" />
-      <Label layoutX="79.0" layoutY="75.0" text="Username" />
-      <Label layoutX="80.0" layoutY="153.0" text="Password" />
-      <Label layoutX="269.0" layoutY="22.0" text="Login">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="title" width="600.0" />
+      <Label layoutX="271.0" layoutY="14.0" text="login" textAlignment="CENTER" textFill="#eceff1">
          <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Button fx:id="loginButton" layoutX="274.0" layoutY="250.0" mnemonicParsing="false" onAction="#login" text="Login" />
-      <Button fx:id="cancelButton" layoutX="270.0" layoutY="293.0" mnemonicParsing="false" text="Cancel" />
-      <PasswordField fx:id="passwordTextField" layoutX="27.0" layoutY="187.0" />
+            <Font name="SansSerif Regular" size="24.0" />
+         </font></Label>
+      <TextField fx:id="usernameTextField" layoutX="226.0" layoutY="96.0" />
+      <Label layoutX="269.0" layoutY="76.0" text="Username" />
+      <Label layoutX="275.0" layoutY="139.0" text="Password" />
+      <Button fx:id="loginButton" layoutX="200.0" layoutY="230.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <Button fx:id="cancelButton" layoutX="200.0" layoutY="266.0" mnemonicParsing="false" text="Cancel" />
+      <PasswordField fx:id="passwordTextField" layoutX="225.0" layoutY="159.0" />
    </children>
 </Pane>

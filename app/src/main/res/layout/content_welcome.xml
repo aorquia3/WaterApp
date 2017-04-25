@@ -13,14 +13,15 @@
     tools:context="com.two_six_mafia.root.waterapp.Controller.WelcomeActivity"
     tools:showIn="@layout/activity_welcome">
 
-    <TextView
-        android:text="Welcome to Water App"
+    <ImageView
+        android:id="@+id/phone_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_gravity="center"
+        android:src="@drawable/logofin2"
+        android:layout_marginBottom="48dp"
+        android:layout_above="@+id/welcome_login"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Register"
@@ -39,4 +40,5 @@
         android:layout_alignLeft="@+id/welcome_register"
         android:layout_alignStart="@+id/welcome_register"
         android:layout_marginBottom="52dp" />
+
 </RelativeLayout>

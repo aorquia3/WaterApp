@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="com.lynden:GMapsFX:2.11.0" level="project" />
+    <orderEntry type="library" name="GMapsFX-2.10.0" level="project" />
   </component>
 </module>
